@@ -97,3 +97,20 @@ FOREIGN KEY(idAdmin) REFERENCES tbadmin(idAdmin),
 FOREIGN KEY(idProfesor) REFERENCES tbprofesor(idProfesor),
 FOREIGN KEY(NomCategoria) REFERENCES tbcategoria(NomCategoria)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE  tbnotas(
+  idNota INTEGER PRIMARY KEY,
+  TitleNota VARCHAR (100) NOT NULL,
+  DescripNota TEXT,
+  EstadoNota ENUM("Reciente","Nuevo","Antiguo"),
+  idAdmin INTEGER (50),
+  idAlumno INTEGER(50),
+  idProfesor INTEGER(50),
+  index(idAdmin),
+  index(idAlumno),
+  index(idProfesor),
+  FOREIGN KEY(idAdmin) REFERENCES tbadmin(idAdmin),
+  FOREIGN KEY(idAlumno) REFERENCES tbalumno(idAlumno),
+  FOREIGN KEY(idProfesor) REFERENCES tbprofesor(idProfesor)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+

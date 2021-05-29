@@ -8,7 +8,8 @@ if (isset($_POST['btnLogin'])) {
     $ValidarUsuario = new ValidarUsuario($_POST['usuario'], $_POST['password']);
     if (mysqli_num_rows($ValidarUsuario->VerificarUsuario()) > 0) {
 
-        $_SESSION['usuario'] = $usuario;
+        $_SESSION['usuario'] = $_POST['usuario'];
+        echo $_POST['usuario'];
         header('location:./App/admin/AdminPanel.php');
         exit;
     } else {

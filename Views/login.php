@@ -43,13 +43,6 @@
                   <input type="submit" value="Ingresar" name="btnLogin" class="btn btn-outline-primary" />
                 </div>
 
-                <div class="form-group mx-sm-4 text-right">
-                  <span class="">No tienes una cuenta?</span>
-                </div>
-                <div class="d-grid gap-2">
-                  <a href="./Views/signup.php" class="btn btn-success">Registrarse</a>
-                </div>
-
               </form>
             </div>
           </div>
