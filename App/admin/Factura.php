@@ -54,10 +54,10 @@
                     Notas</a>
                 <a href="./Archivos.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-archive lead mr-2"></i>
                     Archivos</a>
-                <a href="./Factura.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-card lead mr-2"></i>
+                <a href="./Configuracion.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-card lead mr-2"></i>
                     Facturar</a>
 
-                <a href="./Factura.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
+                <a href="./Configuracion.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
                     Configuración</a>
 
             </div>
@@ -105,7 +105,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
-                                <h1 class="font-weight-bold mb-0">Bienvenido Diego</h1>
+                                <h1 class="font-weight-bold mb-0">Factura</h1>
                                 <p class="lead text-muted">Explorar Soluciones</p>
                             </div>
                             <div class="col-lg-3 col-md-4 d-flex">

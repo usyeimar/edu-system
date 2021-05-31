@@ -1,11 +1,12 @@
 <?php
- session_start();
+session_start();
 //$_SESSION['usuario'] = $_POST['usuario'];
 //  if (!isset($_SESSION['usuario'])) {
 //      header("location:../../");
 //      exit;
 //     }
-// ?>
+// 
+?>
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +38,7 @@
         <div id="sidebar-container" class="bg-primary">
             <div class="logo">
                 <h4 class="text-light font-weight-bold mb-0"><a href="./AdminPanel.php">Edu-System</a></h4>
-               
+
             </div>
             <div class="menu">
                 <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
@@ -54,10 +55,10 @@
                     Notas</a>
                 <a href="./Archivos.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-archive lead mr-2"></i>
                     Archivos</a>
-                <a href="./Factura.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-card lead mr-2"></i>
+                <a href="./Configuracion.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-card lead mr-2"></i>
                     Facturar</a>
 
-                <a href="./Factura.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
+                <a href="#" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
                     Configuración</a>
 
             </div>
@@ -105,18 +106,40 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-9 col-md-8">
-                                <h1 class="font-weight-bold mb-0">Bienvenido Diego</h1>
-                                <p class="lead text-muted">Explorar Soluciones</p>
+                                <h1 class="font-weight-bold mb-0">Crear Usuarios</h1>
+                                <p class="lead text-muted">Seleccione el Tipo de Usuario que desea crear</p>
                             </div>
-                            <div class="col-lg-3 col-md-4 d-flex">
-                                <button class="btn btn-primary w-100 align-self-center">Descargar reporte</button>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Crear <span class="caret"></span>
+                                </button>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Acción #1</a></li>
+                                    <li><a href="#">Acción #2</a></li>
+                                    <li><a href="#">Acción #3</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Acción #4</a></li>
+                                </ul>
                             </div>
+
                         </div>
                     </div>
                 </section>
 
                 <section>
-                   
+                    <div class="col-md-10">
+                        <div class="col-md12">
+                            <form method="POST">
+                                <input type="text" name="idUsuario" class="form-control" placeholder="Cedula">
+                                <input type="text" name="NomUsuario" class="form-control" placeholder="Nombre">
+                                <input type="text" name="ApellidoUsuario" class="form-control" placeholder="Apellido">
+                                <input type="text" name="NickUsuario" class="form-control" placeholder="Nickname">
+                                <input type="text" name="PassUsuario" class="form-control" placeholder="Contraseña">
+                                <input type="text" name="EmailUsuario" class="form-control" placeholder="Email">
+                                <input type="submit" value="Registrar" class="btn btn-primary" name="btningresar">
+                            </form>
+                        </div>
                 </section>
 
             </div>
@@ -161,6 +184,6 @@
         });
     </script>
 
-<?php
-require_once("../Public/include/Footer.php");
-?>
+    <?php
+    require_once("../Public/include/Footer.php");
+    ?>
