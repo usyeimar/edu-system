@@ -1,5 +1,5 @@
 <?php
-class UserSession{
+class UsesSession{
     public function __construct()
     {
         session_start();

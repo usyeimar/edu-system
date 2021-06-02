@@ -1,5 +1,8 @@
+
 <?php
 session_start();
+
+
 require_once('./class/ValidarUsuario.php');
 require_once('./Views/login.php');
 
@@ -8,8 +11,7 @@ if (isset($_POST['btnLogin'])) {
     $ValidarUsuario = new ValidarUsuario($_POST['usuario'], $_POST['password']);
     if (mysqli_num_rows($ValidarUsuario->VerificarUsuario()) > 0) {
 
-        $_SESSION['usuario'] = $_POST['usuario'];
-        echo $_POST['usuario'];
+        $_SESSION['usuario'] = $usuario;
         header('location:./App/admin/AdminPanel.php');
         exit;
     } else {
