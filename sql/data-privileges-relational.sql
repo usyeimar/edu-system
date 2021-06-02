@@ -7,15 +7,12 @@ CREATE TABLE tbadmin(
   ApellidoAdmin VARCHAR(60) NOT NULL COMMENT "Nombre de el usuario",
   EmailAdmin VARCHAR(60) NOT NULL COMMENT "Email de el usario",
   PassAdmin VARCHAR(160) NOT NULL COMMENT "Contrasela de el usario",
-  FechaAccesoAdmin DATETIME COMMENT "Fecha de el ultimo acceso de el usuario",
   CiudadAmin VARCHAR(50) NOT NULL,
   DireccionAdmin VARCHAR (50) NOT NULL,
   TelefonoAdmin VARCHAR(10) NOT NULL,
-  ImagenAdmin VARCHAR(150) COMMENT "Imagen dee el usuario",
-  IpAccesoAdmin VARCHAR(100) NOT NULL COMMENT "Ip de acceso",
-  EstadoAdmin ENUM("Activo", "Inactivo") COMMENT "Describe si el usuario esta activo o inactivo"
+  DateCreate DATETIME NOT NULL DEFAULT now(),
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
-INSERT INTO `tbadmin` (`idAdmin`, `NomAdmin`, `ApellidoAdmin`, `EmailAdmin`, `PassAdmin`, `FechaAccesoAdmin`, `CiudadAmin`, `DireccionAdmin`, `TelefonoAdmin`, `ImagenAdmin`, `IpAccesoAdmin`, `EstadoAdmin`) VALUES ('1042732285', 'Yeimar', 'Lemus', 'yeimar112003@gmail.com', '1234', '2021-06-01 17:10:15.000000', 'Medellin', 'Crar24#6778', '3145643456', NULL, '', 'Activo');
+
 
 CREATE TABLE tbprivilegios(
   idprivilegio INTEGER PRIMARY KEY COMMENT "Llave primaria",
@@ -51,9 +48,6 @@ CREATE TABLE tbalumno (
   CiudadAlumno VARCHAR(50) NOT NULL,
   DireccionAlumno VARCHAR (50) NOT NULL,
   TelefonoAlumno VARCHAR(10) NOT NULL,
-  ImagenAlumno varchar(150) DEFAULT NULL COMMENT 'Imagen de el usuario',
-  IpAcceso varchar(100) NOT NULL COMMENT 'Ip de acceso',
-  EstadoAlumno enum('Activo', 'Inactivo') COMMENT "Estado de el usuario",
   idAdmin INTEGER COMMENT "Llave foranea de el campo idAdmin",
   IdLog INTEGER COMMENT "Llave foranea de el campo idLog",
   index(idAdmin),
@@ -61,7 +55,7 @@ CREATE TABLE tbalumno (
   index(IdLog),
   foreign key (IdLog) references tblog(IdLog) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
-INSERT INTO `tbalumno` (`IdAlumno`, `NomAlumno`, `ApellidoAlumno`, `EmailAlumno`, `PassAlumno`, `CiudadAlumno`, `DireccionAlumno`, `TelefonoAlumno`, `ImagenAlumno`, `IpAcceso`, `EstadoAlumno`, `idAdmin`, `IdLog`) VALUES ('1', 'Leidy', 'Lemus', 'leidylemusomaña@gmail.com', '1234', 'Medellin', 'Cra24#67', '3207896789', NULL, '', 'Activo', '1042732285', NULL);
+
 CREATE TABLE tbprofesor(
   IdProfesor INTEGER PRIMARY KEY COMMENT "Llave primaria",
   NomProfesor VARCHAR(60) COMMENT "Nombre de el alumno",
@@ -71,9 +65,6 @@ CREATE TABLE tbprofesor(
   CiudadProfesor VARCHAR(50) NOT NULL,
   DireccionProfesor VARCHAR (50) NOT NULL,
   TelefonoProfesor VARCHAR(10) NOT NULL,
-  ImagenProfesor varchar(150) DEFAULT NULL COMMENT 'Imagen de el usuario',
-  IpAccesoProfesor varchar(100) NOT NULL COMMENT 'Ip de acceso',
-  EstadoProfesor enum('Activo', 'Inactivo') COMMENT "Estado de el profeso",
   idAdmin INTEGER,
   IdLog INTEGER,
   index(idadmin),

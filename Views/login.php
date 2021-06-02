@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,47 +5,36 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="Views/css/style-login.css">
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <title>.::edu-system::.</title>
 </head>
 
 <body>
-  <br />
-  <div class="container-fluid">
-    <div class="row">
-      <center>
-        <div class="col-12 col-sm-4 col-md-4 col-lg-4">
-          <div class="d-grid gap-3">
-            <div class="shadow-lg p-3 mb-5 bg-body rounded">
-              <br />
-              <div class="col-12 user-img">
-                <img src="Views/img/icon-login.png" th:src="@{/img/user.png}" />
-              </div>
-              <form method="POST">
-                <h1 class="">¡INICIAR SESION!</h1>
 
-                <div class="form-floating ">
-                  <i class="fas fa-user form-control-feedback"></i>
-                  <input type="text" class="form-control " name="usuario" placeholder="Usuario" required />
-                  <label for="floatingInput">Usuario</label>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
 
-                </div>
-                <br />
-                <div class="form-floating mb-3">
-                  <input type="password" name="password" class="form-control" placeholder=" Password" required />
-                  <label for="floatingInput" ">Password</label>
-                </div>
-                <br>
-                <div class="d-grid gap-2">
-                  <input type="submit" value="Ingresar" name="btnLogin" class="btn btn-outline-primary" />
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </center>
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="./Views/img/flame-training.png" id="icon" alt="User Icon" />
+        <h1>EdudSytem</h1>
+      </div>
+
+      <!-- Login Form -->
+      <form>
+        <input type="text" id="login" class="fadeIn second" name="username" placeholder="Usuario">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+        <input type="submit" class="fadeIn fourth" value="Ingresar">
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Recuperar Contraseña</a>
+      </div>
+
     </div>
   </div>
 
@@ -56,9 +44,9 @@
   ?>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 
 </html>

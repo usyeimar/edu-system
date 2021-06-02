@@ -13,11 +13,12 @@
 
           <a href="Usuario.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
               Usuarios</a>
+              
 
           <a href="Cursos.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-stats lead mr-2"></i>
               Cursos</a>
-          <a href="Perfiles.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-person lead mr-2"></i>
-              Perfil</a>
+          <a href="Perfiles.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-person-add lead mr-2"></i>
+              Agregar Perfiles</a>
           <a href="Notas.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-checkbox lead mr-2"></i>
               Notas</a>
           <a href="Archivos.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-archive lead mr-2"></i>

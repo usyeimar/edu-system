@@ -42,15 +42,15 @@ require_once("./template/HeaderAdmin.php");
                   <div class="card-body">
                     <section>
                       <div class="shadow p-3 mb-4 bg-body rounded">
-                        <form class="row g-3 needs-validation" novalidate>
+                        <form class="row g-3 needs-validation" id="Formulario"novalidate method="POST" onsubmit="return InsertaUsuarioNuevo()">
 
                           <div class="col-12 col-md-2">
                             <label for="id">Documento</label>
-                            <input type="text" name="id" id="id" class="form-control" placeholder="Documento">
+                            <input type="text" name="id" id="id" class="form-control" placeholder="Documento" required>
                           </div>
                           <div class="col-12 col-md-4">
                             <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre">
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" required>
                           </div>
                           <div class="col-12 col-md-4">
                             <label for="apellido">Apellido</label>
@@ -65,7 +65,7 @@ require_once("./template/HeaderAdmin.php");
                           </div>
                           <div class="col-12 col-md-3">
                             <label for="correo">Email</label>
-                            <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo">
+                            <input type="email" name="correo" id="correo" class="form-control" placeholder="Correo" required>
                           </div>
                           <div class="col-md-3">
                             <label for="validationCustom04" class="form-label">Ciudad</label>
@@ -80,17 +80,17 @@ require_once("./template/HeaderAdmin.php");
 
                           <div class="col-12 col-md-4">
                             <label for="direccion">Direccion</label>
-                            <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Direccion">
+                            <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Direccion" required>
                           </div>
 
                           <div class="col-12 col-md-3">
                             <label for="telefono">Telefono</label>
-                            <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Telefono">
+                            <input type="text" name="telefono" id="telefono" class="form-control" placeholder="Telefono" required>
                           </div>
 
                           <div class="col-12 col-md-3">
                             <label for="usuario">Usuario</label>
-                            <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese Usuario">
+                            <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese Usuario" required>
                           </div>
 
                           <div class="col-12">
@@ -99,6 +99,21 @@ require_once("./template/HeaderAdmin.php");
                           </div>
                         </form>
                       </div>
+
+                      <script>
+                        function InsertarUsuarioNuevo() {
+                          $.ajax({
+                            method: "POST",
+                            data: $('#Formulario').serialize(),
+                            url: "Core/AgregarUsuario.php",
+                            success:function(respuesta){
+                              alert(respuesta);
+                            }
+                          });
+                          return false;
+
+                        }
+                      </script>
                     </section>
                   </div>
                 </div>

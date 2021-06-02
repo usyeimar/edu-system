@@ -21,22 +21,79 @@ require_once("./template/HeaderAdmin.php");
           <div class="container">
             <div class="row">
               <div class="col-lg-9 col-md-8">
-                <h1 class="font-weight-bold mb-0">Administrador de Archivos</h1>
+
+                <h1 class="font-weight-bold mb-0" id="tablaGestorArchivos">Administrador de Archivos</h1>
                 <p class="lead text-muted">Revisa la última información</p>
+
               </div>
-              
+
             </div>
           </div>
         </section>
 
         <section>
-          
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-11 my-1">
+                <div class="card rounded-0">
+                  <div class="card-body">
+                    <div class="shadow p-3 mb-4 bg-body rounded">
+                      <section>
+                        <main class="app-content">
+                          <div class="app-title">
+                            <div>
+                              <h1><i class="fas fa-archive"></i> Archivos</h1>
+                              <p>Pulsa el boton de + parar agregar registros.</p>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="tile">
+                                <div class="tile-body">
+                                  <div class="table-responsive">
+                                    <table class="table table-hover table-bordered" id="sampleTable">
+                                      <thead>
+                                        <tr>
+                                          <th>Nombre</th>
+                                          <th>Tipo de Archivo</th>
+                                          <th>Descargar</th>
+                                          <th>Visualizar</th>
+                                          <th>Eliminar</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          
+                                        
+                                          <td>
+                                            <span class="btn btn-danger btn-sm" >
+                                            <span class="fas fa-trash-alt"></span>
+                                            </span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </main>
+
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
       </div>
 
     </div>
   </div>
+
 
   <?php
   require_once("./template/FooterAdmin.php");

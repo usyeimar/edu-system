@@ -21,7 +21,7 @@ require_once("./template/HeaderAdmin.php");
           <div class="container">
             <div class="row">
               <div class="col-lg-9 col-md-8">
-                <h1 class="font-weight-bold mb-0">Crear Usuarios</h1>
+                <h1 class="font-weight-bold mb-0">Usuarios Administradores</h1>
                 <p class="lead text-muted">Revisa la última información</p>
               </div>
 
@@ -37,11 +37,12 @@ require_once("./template/HeaderAdmin.php");
                 <div class="card rounded-0">
                   <div class="card-body">
                     <div class="shadow p-3 mb-4 bg-body rounded">
+                      
                       <section>
                         <main class="app-content">
                           <div class="app-title">
                             <div>
-                              <h1><i class="fa fa-th-list"></i>Alumno</h1>
+                              <h1><i class="fas fa-users"></i> Usuarios</h1>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
                           </div>

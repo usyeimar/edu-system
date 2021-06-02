@@ -7,6 +7,10 @@ class Persona
     protected $Email;
     protected $Password;
     protected $Privilegio;
-    protected $FechaRegistro;
+    protected $Ciudad;
+    protected $Direccion;
+    protected $Telefono;
+  
+
 }
 ?>
