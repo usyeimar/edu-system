@@ -66,7 +66,7 @@
 <script type="text/javascript">
   $('#sampleTable').DataTable();
 </script>
-
+<script src="../assets/js/FunctionRoles.js"></script>
 
 </body>
 

@@ -1,3 +1,10 @@
+<?php
+session_start();
+$user = $_SESSION['usuario'];
+if(isset($user));
+header("location:./../../");
+die();
+?>
 <!doctype html>
 <html lang="en">
 

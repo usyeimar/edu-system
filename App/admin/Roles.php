@@ -22,7 +22,7 @@ require_once("./template/HeaderAdmin.php");
             <div class="row">
               <div class="col-lg-9 col-md-8">
 
-                <h1 class="font-weight-bold mb-0" id="tablaGestorArchivos">Administrador de Archivos</h1>
+                <h1 class="font-weight-bold mb-0" id="tablaGestorArchivos">Roles de Usuario</h1>
                 <p class="lead text-muted">Revisa la última información</p>
 
               </div>
@@ -42,10 +42,12 @@ require_once("./template/HeaderAdmin.php");
                         <main class="app-content">
                           <div class="app-title">
                             <div>
-                              <h1><i class="fas fa-archive"></i> Archivos</h1>
+                              <h1><i class="fas fa-user-tag"></i> Roles</h1>
+                              <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#modalFormRol"><i class="fas fa-plus-circle"></i> Nuevo</button>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
                           </div>
+
                           <div class="row">
                             <div class="col-md-12">
                               <div class="tile">
@@ -54,23 +56,30 @@ require_once("./template/HeaderAdmin.php");
                                     <table class="table table-hover table-bordered" id="sampleTable">
                                       <thead>
                                         <tr>
+                                          <th>ID</th>
                                           <th>Nombre</th>
-                                          <th>Tipo de Archivo</th>
-                                          <th>Descargar</th>
-                                          <th>Visualizar</th>
-                                          <th>Eliminar</th>
+                                          <th>Descripcion</th>
+                                          <th>Staus</th>
+                                          <th>Acciones</th>
                                         </tr>
                                       </thead>
                                       <tbody>
                                         <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                          <td>
-                                            <span class="btn btn-danger btn-sm">
-                                              <span class="fas fa-trash-alt"></span>
-                                            </span>
+                                          <td>Tiger Nixon</td>
+                                          <td>System Architect</td>
+                                          <td>Edinburgh</td>
+                                          <td>61</td>
+                                          <td style="width:150px;">
+                                            <div>
+                                              <span class="btn btn-success btn-sm">
+                                                <span <i class="fas fa-edit"></i></span>
+                                            </div>
+                                            <div>
+                                              <span class="btn btn-danger btn-sm">
+                                                <span class="fas fa-trash-alt"></span>
+                                            </div>
+
+
                                           </td>
                                         </tr>
                                       </tbody>
@@ -83,6 +92,7 @@ require_once("./template/HeaderAdmin.php");
                         </main>
 
                       </section>
+
                     </div>
                   </div>
                 </div>
@@ -98,5 +108,7 @@ require_once("./template/HeaderAdmin.php");
 
 
   <?php
+
   require_once("./template/FooterAdmin.php");
+  require_once("./Modals/ModalRoles.php");
   ?>

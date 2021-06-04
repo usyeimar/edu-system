@@ -2,40 +2,43 @@
 require_once 'ConexionDB.php';
 require_once 'Persona.php';
 
-class RegistrarUsuario extends Persona
+class Usuario extends Persona
 {
-    protected $Usuario;
-    protected $Password;
+    private $Usuario;
+    private $Password;
     
-    public function __construct($nombre,$apellido,$usuario,$email,$idprivilegio,$password)
+    public function __construct($id,$nombre,$apellido,$email,$password,$ciudad,$direccion,$telefono,$usuario)
     {
+        $this->Id = $id;
         $this->Nombre = $nombre;
         $this->Apellido = $apellido;
-        $this->Usuario = $usuario;
         $this->Email = $email;
-        $this->Privilegio = $idprivilegio;
         $this->Password = $password;
-        ini_set('date.timezone', 'America/Bogota');
-        $this->FechaRegistro = date(DATE_RFC2822);
+        $this->Ciudad = $ciudad;
+        $this->Direccion = $direccion;
+        $this->Telefono = $telefono;
+        $this->Usuario = $usuario;
       
     
     }
-    public function InsertarUsuario()
+    public function AgregarUsuario()
     {
+        $id = $this->Id;
         $nombre = $this->Nombre;
         $apellido = $this->Apellido;
-        $usuario = $this->Usuario;
         $email = $this->Email;
-        $idprivilegio = $this->Privilegio;
         $password = $this->Password;
-        $fecharegistro = $this->FechaRegistro;
+        $ciudad = $this->Ciudad;
+        $direccion = $this->Direccion;
+        $telefono = $this->Telefono;
+        $usuario = $this->Usuario;
 
         $Conexion = New ConexionDB();
-        $Conexion->EstalecerConexion()->query("INSERT INTO usuario(nombre, apellido , usuario ,email,id_privilegio,password ,fecha_registro) VALUES ('$nombre','$apellido','$usuario','$email','$idprivilegio','$password','$fecharegistro')");
-        
-
-
+        $sql = "INSERT INTO tbusuarios('idUsuario', 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate') VALUES ('$id','$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono','$usuario',NOW()";
+        $Conexion->EstablecerConexion()->query($sql);
+        $Conexion->__destruct();//Destruimos la conexion
+        echo"Datos registrados";
     }
-}
 
-?>
+    
+}

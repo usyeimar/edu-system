@@ -1,11 +1,10 @@
 <?php
 class Persona
 {
-    protected $id;
+    protected $Id;
     protected $Nombre;
     protected $Apellido;
     protected $Email;
-    protected $Password;
     protected $Privilegio;
     protected $Ciudad;
     protected $Direccion;

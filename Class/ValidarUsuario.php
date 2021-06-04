@@ -1,7 +1,7 @@
 <?php
 require_once('ConexionDB.php');
 
-class ValidarUsuario 
+class ValidarUsuarios
 {
     private $user;
     private $pass;
@@ -10,18 +10,14 @@ class ValidarUsuario
         $this->pass = $pass;
         
     }
-    public function VerificarUsuario()
+    public function LoginUsuario()
     {
         $user = $this->user;
         $pass = $this->pass;
-      
-        $query ="SELECT * FROM tbadmin WHERE NickAdmin = '$user' AND PassAdmin = '$pass'";
-
-        $conexion = new ConexionDB();
-        $process = mysqli_query($conexion->EstalecerConexion(),$query);
-        return $process;
+        $Conexion = new ConexionDB();
+        $sql ="SELECT COUNT(*) as UserExist FROM tbusuarios WHERE NomUsuario = '$user' AND PassUsuario = '$pass'";
+        $query =$Conexion->EstablecerConexion()->query($sql);
+        return $query;
     }
     
 }
-
-?>

@@ -6,15 +6,20 @@
         private $password;
         private $db;
 
-        public function __construct($host = "localhost", $user = "root", $password = "", $db = "edusystemdb")
+        public function __construct(
+            $host = "localhost",
+            $user = "root",
+            $password = "",
+            $db = "edusystemdb"
+        )
         {
             $this->host      = $host;
-            $this->db        = $db;
             $this->user      = $user;
             $this->password  = $password;
+            $this->db        = $db;
            
         }
-        public function EstalecerConexion()
+        public function EstablecerConexion()
         {
            
             $conexion = new mysqli($this->host,$this->user,$this->password,$this->db);
@@ -29,7 +34,7 @@
     
         function __destruct()
         {
-            mysqli_close($this->EstalecerConexion());
+            mysqli_close($this->EstablecerConexion());
         }
 
         
