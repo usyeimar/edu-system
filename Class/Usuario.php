@@ -1,4 +1,5 @@
 <?php
+
 require_once 'ConexionDB.php';
 require_once 'Persona.php';
 
@@ -6,8 +7,8 @@ class Usuario extends Persona
 {
     private $Usuario;
     private $Password;
-    
-    public function __construct($id,$nombre,$apellido,$email,$password,$ciudad,$direccion,$telefono,$usuario)
+
+    public function __construct($id, $nombre, $apellido, $email, $password, $ciudad, $direccion, $telefono, $usuario)
     {
         $this->Id = $id;
         $this->Nombre = $nombre;
@@ -18,8 +19,6 @@ class Usuario extends Persona
         $this->Direccion = $direccion;
         $this->Telefono = $telefono;
         $this->Usuario = $usuario;
-      
-    
     }
     public function AgregarUsuario()
     {
@@ -33,11 +32,10 @@ class Usuario extends Persona
         $telefono = $this->Telefono;
         $usuario = $this->Usuario;
 
-        $Conexion = New ConexionDB();
-        $sql = "INSERT INTO tbusuarios('idUsuario', 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate') VALUES ('$id','$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono','$usuario',NOW()";
-        $Conexion->EstablecerConexion()->query($sql);
-        $Conexion->__destruct();//Destruimos la conexion
-        echo"Datos registrados";
+        $Conexion = new ConexionDB();
+        $Conexion->EstablecerConexion()->query("INSERT INTO tbusuarios (, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate') VALUES ('$id','$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono','$usuario',NOW()");
+        $Conexion->__destruct(); //Destruimos la conexion
+        echo "Datos registrados";
     }
 
     

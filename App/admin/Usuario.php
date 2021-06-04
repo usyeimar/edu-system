@@ -1,5 +1,9 @@
 <?php
 require_once("./template/HeaderAdmin.php");
+require_once("../../Class/ConexionDB.php");
+// $Objeto = new ConexionDB();
+// $sql = "SELECT * FROM tbusuarios (idUsuario, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate')";
+// $Resultado = mysqli_query($Objeto->EstablecerConexion(),$sql);
 ?>
 
 <body>
@@ -67,16 +71,21 @@ require_once("./template/HeaderAdmin.php");
                                         </tr>
                                       </thead>
                                       <tbody>
-                                        <tr>
-                                          <td>Tiger Nixon</td>
-                                          <td>System Architect</td>
-                                          <td>Edinburgh</td>
-                                          <td>61</td>
-                                          <td>2011/04/25</td>
-                                          <td>$320,800</td>
-                                          <td>Foo</td>
-                                          <td>Food</td>
-                                          <td>Activo</td>
+                                        <?php
+                                        // while ($UserData = mysqli_fetch_row($Resultado)) {
+                                        // }
+
+                                        // ?>
+                                        // <tr>
+                                        //   <td><?php echo $UserData['idUsuario'] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+                                        //   <td><?php echo $UserData[''] ?></td>
+
                                           <td style="width:150px;">
                                             <div>
                                               <span class="btn btn-success btn-sm">

@@ -21,8 +21,8 @@ require_once("./template/HeaderAdmin.php");
           <div class="container">
             <div class="row">
               <div class="col-lg-9 col-md-8">
-                <h1 class="font-weight-bold mb-0">Bienvenido Diego</h1>
-                <p class="lead text-muted">Revisa la última información</p>
+                <h1 class="font-weight-bold mb-0">Bienvenido  <?php echo $UserSession ?></h1>
+                <p class="lead text-muted"><?php echo $idUserSession ?>Revisa la última información</p>
               </div>
               <div class="col-lg-3 col-md-4 d-flex">
                 <button class="btn btn-primary w-100 align-self-center">Descargar reporte</button>

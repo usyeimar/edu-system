@@ -1,9 +1,11 @@
 <?php
 session_start();
-$user = $_SESSION['usuario'];
-if(isset($user));
-header("location:./../../");
-die();
+error_reporting(0);
+$UserSession = $_SESSION['usuario'];
+$idUserSession = $_SESSION['idUsuario'];
+if(!isset($UserSession)){
+  header("location: ../../");
+}
 ?>
 <!doctype html>
 <html lang="en">

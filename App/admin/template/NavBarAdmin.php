@@ -14,14 +14,18 @@
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="" class="img-fluid rounded-circle avatar mr-2" alt="https://generated.photos/" />
-                        Diego Velázquez
+                        <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-users-icon-png-image_4144740.jpg" class="img-fluid rounded-circle avatar mr-2" alt="user-img"/>
+                        <?php
+                        echo $UserSession;
+                       
+                        // echo ucwords($_SESSION['usuario']['nombre'])."". ucwords($_SESSION['usuario']['apellido']);
+                        ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Mi perfil</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Mi perfil</a>
                         <a class="dropdown-item" href="#">Suscripciones</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="Commands/CerrarSession.php">Cerrar sesión</a>
+                        <a class="dropdown-item" href="Commands/CerrarSession.php"><i style="color: red" class="fas fa-power-off"></i> Salir</a>
                     </div>
                 </li>
             </ul>

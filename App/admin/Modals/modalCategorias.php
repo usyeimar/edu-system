@@ -1,6 +1,6 @@
 <!-- Modal nueva categoria-->
-<div class="modal fade" id="modalFormCategorias" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+<div class="modal fade" id="ModalCategoria" tabindex=" -1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header headerRegister">
         <h5 class="modal-title" id="titleModal">Nueva Categoria</h5>
@@ -9,54 +9,17 @@
         </button>
       </div>
       <div class="modal-body">
-            <form id="formCategoria" name="formCategoria" class="formHorizontal">
+        <form id="formCategoria" name="formCategoria" class="formHorizontal">
               <input type="hidden" id="idCategoria" name="idCategoria" value="">
-              <input type="hidden" id="foto_actual" name="foto_actual" value="">
-              <input type="hidden" id="foto_remove" name="foto_remove" value="0"> 
-              <p class="text-primary">Los campos con asterisco (<span class="required">*</span>) son obligatorios.</p>
-            
-                  <div class="row">
-                      <div class="col-md-6">
-                      <input type="hidden" id="idCategoria" name="idCategoria" value="">
-                        <div class="form-group">
-                            <label class="control-label">Nombre <span class="required">*</span></label>
-                            <input class="form-control" id="txtNombre" name="txtNombre" type="text" placeholder="Nombre del Categoria" required="">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Descripción <span class="required">*</span></label>
-                            <textarea class="form-control" id="txtDescripcion" name="txtDescripcion" rows="2" placeholder="Descripcion del Categoría" required=""></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleSelect1">Estado <span class="required">*</span></label>
-                            <select class="form-control selectpicker" id="listStatus" name="listStatus" required="">
-                            <option value="1">Activo</option>
-                            <option value="2">Inactivo</option>
-                            </select>
-                        </div>
-                      </div>
-                     <div class="col-md-6">
-                      <div class="photo">
-                      <label for="foto">Foto (570x380)</label>
-                          <div class="prevPhoto">
-                            <span class="delPhoto notBlock">X</span>
-                            <label for="foto"></label>
-                            <div>
-                              <img id="img" src="<?= media(); ?>/images/uploads/portada_categoria.png">
-                            </div>
-                          </div>
-                          <div class="upimg">
-                            <input type="file" name="foto" id="foto">
-                          </div>
-                          <div id="form_alert"></div>
-                        </div>
-                     </div>
-                    </div>
-          
-                <div class="tile-footer">
-                  <button  id="btnActionForm"class="btn btn-success" type="submit"><i class="fa fa-fw fa-lg fa-check-circle" aria-hidden="true"></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-check-circle"></i> Cerrar</button>
-                </div>
-            </form>
+              <div class="form-group">
+                <label class="control-label">Nombre <span class="required">*</span></label>
+                <input class="form-control" id="txtNombreCategoria" name="txtNombre" type="text" placeholder="Nombre del Categoria" required="">
+              </div>
+              <div class="tile-footer">
+                <button id="btnActionFormCategoria" class="btn btn-info" type="submit"><i class="fa fa-fw fa-lg fa-check-circle" aria-hidden="true"></i><span id="btnText">Guardar</span></button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-check-circle"></i> Cancelar</button>
+              </div>
+        </form>
       </div>
     </div>
   </div>
@@ -64,7 +27,7 @@
 
 <!-- modalViewCategoria -->
 <div class="modal fade" id="modalViewCategoria" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" >
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header header-primary">
         <h5 class="modal-title" id="titleModal">Datos de la categoria</h5>
@@ -105,4 +68,31 @@
   </div>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#btnActionFormCategoria').click(function(){
+    var categoria = $('#txtNombreCategoria').val();
+    if (categoria == "") {
+      swal("Debes agregar una categoria");
+      return false;
+    }else{
+      $.ajax({
+        type:"POST",
+        data:"categoria = " + categoria,
+        url:"../Core/ AgregarCategoria.php",
+        success:function(respuesta){
+          respuesta = respuesta.trim();
+          if(respuesta == 1){
+            $('#txtNombreCategoria').val("");
+            swal(":D","Agregado con exito","success")
+            
+          }else{
+            swal(":(","Fallo al Agregar","error")
+          }
+        }
 
+      });
+    }
+  });
+});
+</script>

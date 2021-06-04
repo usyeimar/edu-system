@@ -63,4 +63,12 @@ CREATE TABLE tbnotas (
   FechaHora DATETIME NOT NULL,
   idUsuario INTEGER,
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
-);
+)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+CREATE  TABLE tbcategoria_file(
+  idCategoria INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  idUsuario INTEGER NOT  NULL ,
+  NomCategoria VARCHAR(255) NOT NULL ,
+  FechaInsertCategoria DATETIME DEFAULT NOW(),
+  FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
+)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+

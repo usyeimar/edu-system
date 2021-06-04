@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -24,10 +25,11 @@
       </div>
 
       <!-- Login Form -->
-      <form action="./App/ProcesarLogin.php"method="POST" >
+      <form action="./App/ProcesarLogin.php" method="POST">
         <input type="text" id="login" class="fadeIn second" name="username" placeholder="Usuario" required="">
         <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" required="">
         <input type="submit" class="fadeIn fourth" value="Ingresar" name="btnLogin">
+        
       </form>
 
       <!-- Remind Passowrd -->
@@ -37,7 +39,7 @@
 
     </div>
   </div>
-  
+
 
   <?php
   // include_once("./assets/php-script/validarLogin.php");

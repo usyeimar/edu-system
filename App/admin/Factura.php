@@ -24,9 +24,7 @@ require_once("./template/HeaderAdmin.php");
                 <h1 class="font-weight-bold mb-0">Factura</h1>
                 <p class="lead text-muted">Revisa la última información</p>
               </div>
-              <div class="col-lg-3 col-md-4 d-flex">
-                <button class="btn btn-primary w-100 align-self-center">Descargar reporte</button>
-              </div>
+             
             </div>
           </div>
         </section>
@@ -42,21 +40,40 @@ require_once("./template/HeaderAdmin.php");
                   <div class="card-body">
                     <section>
                       <div class="shadow p-3 mb-4 bg-body rounded">
-
+                        <section>
+                          <main class="app-content">
+                            <div class="app-title">
+                              <div>
+                                <h1><i class="fas fa-wallet"></i> Factura</h1>
+                                <p>Pulsa el boton de + parar agregar registros.</p>
+                              </div>
+                            </div>
+                          </main>
+                        </section>
 
                       </div>
-                    </section>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
-      </div>
 
+
+      </div>
+      </section>
     </div>
+  </div>
+  </div>
+
+  </div>
+  </div>
+  </section>
+
+  </div>
+
+  </div>
   </div>
 
   <?php

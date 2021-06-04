@@ -43,7 +43,7 @@ require_once("./template/HeaderAdmin.php");
                           <div class="app-title">
                             <div>
                               <h1><i class="fas fa-user-tag"></i> Roles</h1>
-                              <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#modalFormRol"><i class="fas fa-plus-circle"></i> Nuevo</button>
+                              <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalFormRol"><i class="fas fa-plus-circle"></i> Nuevo</button>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
                           </div>

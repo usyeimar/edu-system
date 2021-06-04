@@ -13,11 +13,11 @@ class User extends ConexionDB{
         $query = $this->EstablecerConexion()->prepare('SELECT * FROM usuarios WHERE username = :user AND password = :pass');
         $query->execute(['user' => $user, 'pass' => $md5pass]);
 
-        if($query->rowCount({
-            return true;
-        }else{
-            return false;
-        }
+        // if($query->rowCount({
+        //     return true;
+        // }else{
+        //     return false;
+        // }
     }
 
     public function setUser($user){

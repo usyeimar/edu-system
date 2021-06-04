@@ -22,11 +22,10 @@ require_once("./template/HeaderAdmin.php");
             <div class="row">
               <div class="col-lg-9 col-md-8">
 
-                <h1 class="font-weight-bold mb-0" id="tablaGestorArchivos">Administrador de Archivos</h1>
+                <h1 class="font-weight-bold mb-0" id="tablaGestorArchivos">Notas Personales</h1>
                 <p class="lead text-muted">Revisa la última información</p>
 
               </div>
-
             </div>
           </div>
         </section>

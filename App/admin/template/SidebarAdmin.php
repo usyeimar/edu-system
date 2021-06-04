@@ -8,7 +8,7 @@
 
 
       <div class="menu">
-          <a href="#" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
+          <a href="Dashboard.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
               Dashboard</a>
 
           <a href="Usuario.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
@@ -17,6 +17,8 @@
               Roles</a>
           <a href="Archivos.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-archive lead mr-2"></i>
               Archivos</a>
+           <a href="CategoriaFile.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-filing lead mr-2"></i>
+              Categorias File</a>
           <a href="Notas.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-checkbox lead mr-2"></i>
               Notas</a>
           <a href="Cursos.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-stats lead mr-2"></i>
@@ -26,6 +28,8 @@
 
           <a href="Configuracion.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
               Configuración</a>
+          <a href="uploads/Files.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
+              FtPFile</a>
 
       </div>
 
