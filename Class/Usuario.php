@@ -33,7 +33,7 @@ class Usuario extends Persona
         $usuario = $this->Usuario;
 
         $Conexion = new ConexionDB();
-        $Conexion->EstablecerConexion()->query("INSERT INTO tbusuarios (, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate') VALUES ('$id','$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono','$usuario',NOW()");
+        $Conexion->EstablecerConexion()->query("INSERT INTO tbusuarios (idUsuario, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate') VALUES ('$id','$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono','$usuario',NOW()");
         $Conexion->__destruct(); //Destruimos la conexion
         echo "Datos registrados";
     }

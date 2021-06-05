@@ -1,2 +1,2 @@
 RewriteEngine on
-ErrorDocument 404 http://localhost/edu-system/App/Public/error/
+ErrorDocument 404 http://sistemaeducacion-env.eba-bsc87rbu.us-east-1.elasticbeanstalk.com/App/Public/error/
