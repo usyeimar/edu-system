@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS btktch9ncxiosgnrrrdg;
-CREATE DATABASE btktch9ncxiosgnrrrdg;
-USE btktch9ncxiosgnrrrdg;
+DROP DATABASE IF EXISTS edusystemdb;
+CREATE DATABASE edusystemdb;
+USE edusystemdb;
 CREATE TABLE tbusuarios(
   idUsuario INTEGER PRIMARY KEY COMMENT "Llave primaria",
   NomUsuario VARCHAR(60)  COMMENT "Nombre de el usuario",
