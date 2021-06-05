@@ -1,10 +1,8 @@
 <?php
-echo $id = trim($_POST['documento']);
-echo "<br>";
+echo $id = trim($_POST['documento']);echo "<br>";
 echo $nombre = trim($_POST['nombre']);
 echo "<br>";
-echo $apellido = trim($_POST['apellido']);
-echo "<br>";
+echo $apellido = trim($_POST['apellido']);echo "<br>";
 echo $correo = trim($_POST['correo']);
 echo "<br>";
 echo $password = trim($_POST['password']);
@@ -15,11 +13,10 @@ echo $direccion = trim($_POST['direccion']);
 echo "<br>";
 echo $telefono = trim($_POST['telefono']);
 echo "<br>";
-echo $usuario = trim($_POST['usuario']);
-echo "<br>";
+echo $usuario = trim($_POST['usuario']);echo "<br>";
 
 
-require_once '../../Class/Usuario.php';
+//require_once '../../Class/Usuario.php';
 require_once '../../Class/prueba.php';
 //$RegistrarUsuario = new Usuario($_POST["documento"],$_POST["nombre"],$_POST["apellido"],$_POST["correo"],$_POST["password"],$_POST["ciudad"],$_POST["direccion"],$_POST["telefono"],$_POST["usuario"]);
 //$RegistrarUsuario->AgregarUsuario();

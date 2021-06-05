@@ -59,6 +59,17 @@ class prueba
         '$TelefonoUsuario',
         '$DateCreate'
         )");
+         echo "Datos registrados";
+
+         echo '<br/> oeeeee '.$idUsuario;
+         echo '<br/>'.$NomUsuario;
+         echo '<br/>'.$ApellidoUsuario;
+         echo '<br/>'.$EmailUsuario;
+         echo '<br/>'.$PassUsuario;
+         echo '<br/>'.$CiudadUsuario;
+         echo '<br/>'.$DireccionUsuario;
+         echo '<br/>'.$TelefonoUsuario;
+        
         
     }
 }
