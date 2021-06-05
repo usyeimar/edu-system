@@ -24,10 +24,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleSelect1">Seleccione una Prioridad</label>
-                        <select class="form-control" id="listStatus" name=listaprioridad" required="">
+                        <select class="form-control" id="listStatus" name="listaprioridad" required="">
+                            <option selected >Selecciona una Prioridad</option>
                             <option value="0">Urgente -> De Prisa</option>
                             <option value="1">Mas Tarde -> Relajado</option>
-                            <option value="2">Norma -> Cardio</option>
+                            <option value="2">Normal -> Cardio</option>
                             
                         </select>
                     </div>

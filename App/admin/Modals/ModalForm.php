@@ -136,7 +136,7 @@
                             <input type="date" name="fechanac" id="fechanac" class="form-control" placeholder="FechaNAcimiento" required="">
                         </div>
 
-                        <div class="col-12 col-md-7">
+                        <div class="col-12 col-md-8">
                             <label for="usuario">Usuario</label>
                             <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese Usuario" required="">
                         </div>

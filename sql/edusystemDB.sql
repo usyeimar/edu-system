@@ -10,7 +10,6 @@ CREATE TABLE tbusuarios(
   CiudadUsuario VARCHAR(50) NOT NULL,
   DireccionUsuario VARCHAR (50) NOT NULL,
   TelefonoUsuario VARCHAR(10) NOT NULL,
-  
   DateCreate DATETIME NOT NULL DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
@@ -22,15 +21,7 @@ CREATE TABLE tbprivilegios(
   index(idUsuario),
   foreign key(idUsuario) references tbusuarios(idUsuario) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
-CREATE TABLE tbregistro (
-  idRegistro INTEGER PRIMARY KEY COMMENT 'primary key',
-  FechaRegistro VARCHAR(50) NOT NULL COMMENT 'Fecha de registro',
-  TipoRegistro enum("Personal", "Bussines", "For Education") NOT NULL,
-  EmpresaRegistro varchar(50) COMMENT "Empresa",
-  idUsuario INTEGER,
-  index(idUsuario),
-  foreign key (idUsuario) references tbusuarios(idUsuario) ON DELETE CASCADE
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tblog(
   IdLog INTEGER PRIMARY KEY COMMENT 'Llave primaria',
   CambiosLog VARCHAR (50) COMMENT "Cambios hechos en el sistema",
@@ -52,6 +43,7 @@ CREATE TABLE tbcursos(
   imagenCurso VARCHAR (250) COMMENT "Imagen de el curso",
   destCurso TEXT COMMENT "Descripcion de el curso",
   idUsuario INTEGER (50) COMMENT "LLave foranea de el Usuario",
+  PrecioCurso DOUBLE NOT NULL,
   index(idUsuario),
   index(NomCategoria),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE,
@@ -63,6 +55,7 @@ CREATE TABLE tbnotas (
   DescriptNota TEXT NOT NULL,
   FechaHora DATETIME NOT NULL,
   idUsuario INTEGER,
+  PrioridadNota
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 )ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 CREATE  TABLE tbcategoria_file(
@@ -70,6 +63,16 @@ CREATE  TABLE tbcategoria_file(
   idUsuario INTEGER NOT  NULL ,
   NomCategoria VARCHAR(255) NOT NULL ,
   FechaInsertCategoria DATETIME DEFAULT NOW(),
+  index(idUsuario),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 )ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
+CREATE  TABLE tbfactura(
+idFactura INTEGER PRIMARY KEY,
+DescripcionFactura TEXT,
+idUsuario INTEGER,
+PrecioCurso DOUBLE,
+FechaInsertFactura DATETIME NOT NULL DEFAULT now()
+index(idUsuario),
+FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
+)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
