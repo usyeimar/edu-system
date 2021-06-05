@@ -6,12 +6,7 @@
         private $password;
         private $db;
 
-        public function __construct(
-            $host = "btktch9ncxiosgnrrrdg-mysql.services.clever-cloud.com",
-            $user = "uzzapspzrzeietyb",
-            $password = "bglB0brGtXCYtqzr9bru",
-            $db = "btktch9ncxiosgnrrrdg"
-        )
+        public function __construct($host ="btktch9ncxiosgnrrrdg-mysql.services.clever-cloud.com",$user = "uzzapspzrzeietyb",$password = "bglB0brGtXCYtqzr9bru",$db = "btktch9ncxiosgnrrrdg")
         {
             $this->host      = $host;
             $this->user      = $user;

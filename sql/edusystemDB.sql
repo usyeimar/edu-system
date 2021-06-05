@@ -1,16 +1,16 @@
-DROP DATABASE IF EXISTS edusystemdb;
-CREATE DATABASE edusystemdb;
-USE edusystemdb;
+DROP DATABASE IF EXISTS btktch9ncxiosgnrrrdg;
+CREATE DATABASE btktch9ncxiosgnrrrdg;
+USE btktch9ncxiosgnrrrdg;
 CREATE TABLE tbusuarios(
   idUsuario INTEGER PRIMARY KEY COMMENT "Llave primaria",
-  NomUsuario VARCHAR(60) NOT NULL COMMENT "Nombre de el usuario",
-  ApellidoUsuario VARCHAR(60) NOT NULL COMMENT "Nombre de el usuario",
-  EmailUsuario VARCHAR(60) NOT NULL COMMENT "Email de el usario",
-  PassUsuario VARCHAR(160) NOT NULL COMMENT "Contrasela de el usario",
-  CiudadUsuario VARCHAR(50) NOT NULL,
-  DireccionUsuario VARCHAR (50) NOT NULL,
-  TelefonoUsuario VARCHAR(10) NOT NULL,
-  DateCreate DATETIME NOT NULL DEFAULT now()
+  NomUsuario VARCHAR(60)  COMMENT "Nombre de el usuario",
+  ApellidoUsuario VARCHAR(60)  COMMENT "Nombre de el usuario",
+  EmailUsuario VARCHAR(60)  COMMENT "Email de el usario",
+  PassUsuario VARCHAR(160) COMMENT "Contrasela de el usario",
+  CiudadUsuario VARCHAR(50) ,
+  DireccionUsuario VARCHAR (50),
+  TelefonoUsuario VARCHAR(10) ,
+  DateCreate DATETIME  DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 
