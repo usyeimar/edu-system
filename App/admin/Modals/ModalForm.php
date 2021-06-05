@@ -133,10 +133,10 @@
 
                         <div class="col-12 col-md-4">
                             <label for="telefono">Fecha Nacimiento</label>
-                            <input type="date" name="fechanac" id="fechanac" class="form-control" placeholder="FechaNAcimiento" required="">
+                            <input type="date" name="fechanac" id="FechaNacimiento" class="form-control" placeholder="FechaNAcimiento" required="">
                         </div>
 
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-md-">
                             <label for="usuario">Usuario</label>
                             <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese Usuario" required="">
                         </div>

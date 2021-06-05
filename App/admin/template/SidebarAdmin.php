@@ -1,6 +1,6 @@
   <!-- Sidebar -->
   <div id="sidebar-container" class="bg-primary">
-      <a href="AdminPanel.php">
+      <a href="Dashboard.php">
           <div class="logo">
               <h4 class="text-light font-weight-bold mb-0">Edu-System</h4>
           </div>

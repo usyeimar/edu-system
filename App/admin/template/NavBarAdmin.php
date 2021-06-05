@@ -22,7 +22,7 @@
                         ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog"></i> Mi perfil</a>
+                        <a class="dropdown-item" href="Perfil.php"><i class="fas fa-user-cog"></i> Mi perfil</a>
                         <a class="dropdown-item" href="#">Suscripciones</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="Commands/CerrarSession.php"><i style="color: red" class="fas fa-power-off"></i> Salir</a>
