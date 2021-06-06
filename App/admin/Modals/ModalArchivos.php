@@ -10,7 +10,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form id="FormArchivos" enctype="multipart/form-data" method="POST" class="formHorizontal">
+        <form id="ModalArchivos" enctype="multipart/form-data" method="POST" class="formHorizontal">
           <div class="form-group">
             <label class="control-label">Categoria <span class="required">*</span></label>
             <div id="LoadCategorias"></div>
