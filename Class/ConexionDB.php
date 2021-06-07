@@ -6,7 +6,7 @@
         private $password;
         private $db;
 
-        public function __construct($host ="btktch9ncxiosgnrrrdg-mysql.services.clever-cloud.com",$user = "uzzapspzrzeietyb",$password = "bglB0brGtXCYtqzr9bru",$db = "btktch9ncxiosgnrrrdg")
+        public function __construct($host ="edusytemdb.c71m7sxfy29n.us-east-1.rds.amazonaws.com",$user = "armagedon",$password = "admindb-1234",$db = "edusystemdb")
         {
             $this->host      = $host;
             $this->user      = $user;
