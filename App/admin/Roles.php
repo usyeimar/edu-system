@@ -58,9 +58,14 @@ require_once("./template/HeaderAdmin.php");
                                         <tr>
                                           <th>ID</th>
                                           <th>Nombre</th>
-                                          <th>Descripcion</th>
-                                          <th>Staus</th>
-                                          <th>Acciones</th>
+                                          <th>Apellido</th>
+                                          <th>Email</th>
+                                          <th>Password</th>
+                                          <th>Ciudad</th>
+                                          <th>Direccion</th>
+                                          <th>Telefono</th>
+                                          <th>Fecha Nacimiento</th>
+
                                         </tr>
                                       </thead>
                                       <tbody>

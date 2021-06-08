@@ -9,6 +9,7 @@ class Persona
     protected $Ciudad;
     protected $Direccion;
     protected $Telefono;
+    protected $FechaNacimiento;
   
 
 }

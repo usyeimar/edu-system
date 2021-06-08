@@ -1,10 +1,13 @@
 <?php
 require_once("./template/HeaderAdmin.php");
 require_once("../../Class/ConexionDB.php");
-// $Objeto = new ConexionDB();
-// $sql = "SELECT * FROM tbusuarios (idUsuario, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate')";
-// $Resultado = mysqli_query($Objeto->EstablecerConexion(),$sql);
+$Objeto = new ConexionDB();
+$sql = "SELECT * FROM tbusuarios";
+$query = $Objeto->EstablecerConexion()->query($sql);
+$ArrayData = $query->fetch_array();
+
 ?>
+
 
 <body>
   <div class="d-flex" id="content-wrapper">
@@ -55,51 +58,56 @@ require_once("../../Class/ConexionDB.php");
                                 <div class="tile-body">
                                   <div class="table-responsive">
                                     <table class="table table-hover table-bordered" id="sampleTable">
+
                                       <thead>
                                         <tr>
-                                          <th>Documento</th>
+                                          <th>ID</th>
                                           <th>Nombre</th>
                                           <th>Apellido</th>
                                           <th>Email</th>
-                                          <th>Contraseña</th>
+                                          <th>Password</th>
                                           <th>Ciudad</th>
                                           <th>Direccion</th>
                                           <th>Telefono</th>
-                                          <th>Status</th>
-                                          <th>Accion</th>
-
+                                          <th>Fecha Nacimiento</th>
+                                          <th>Acciones</th>
                                         </tr>
                                       </thead>
-                                      <tbody>
+                                      <?php
+                                      //while ($ArrayData = $query->fetch_array()){
+
+                                      foreach ($ArrayData as $ArrayData) {
+                                      ?>
+                                        <tbody>
+                                          <tr>
+                                            <td><?php echo $ArrayData['idUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['NomUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['ApellidoUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['EmailUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['PassUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['CiudadUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['DireccionUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['TelefonoUsuario'] ?></td>
+                                            <td><?php echo $ArrayData['FechaNacimiento'] ?></td>
+
+
+                                            <td style="width:150px;">
+                                              <div>
+                                                <span class="btn btn-success btn-sm">
+                                                  <span <i class="fas fa-edit"></i></span>
+                                              </div>
+                                              <div>
+                                                <span class="btn btn-danger btn-sm">
+                                                  <span class="fas fa-trash-alt"></span>
+                                              </div>
+
+
+                                            </td>
+                                          </tr>
                                         <?php
-                                        // while ($UserData = mysqli_fetch_row($Resultado)) {
-                                        // }
-
-                                        // ?>
-                                        // <tr>
-                                        //   <td><?php echo $UserData['idUsuario'] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-                                        //   <td><?php echo $UserData[''] ?></td>
-
-                                          <td style="width:150px;">
-                                            <div>
-                                              <span class="btn btn-success btn-sm">
-                                                <span <i class="fas fa-edit"></i></span>
-                                            </div>
-                                            <div>
-                                              <span class="btn btn-danger btn-sm">
-                                                <span class="fas fa-trash-alt"></span>
-                                            </div>
-
-
-                                          </td>
-                                        </tr>
-                                      </tbody>
+                                      }
+                                        ?>
+                                        </tbody>
                                     </table>
                                   </div>
                                 </div>

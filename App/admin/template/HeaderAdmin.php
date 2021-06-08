@@ -25,7 +25,8 @@ if(!isset($UserSession)){
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
 <!--Favicon Icon-->
-<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+<link  rel="icon"   href="./assets/img/usuario.png" type="image/png" />
+
   <!-- Ionic icons -->
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">

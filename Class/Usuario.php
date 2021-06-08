@@ -8,7 +8,7 @@ class Usuario extends Persona
     private $Usuario;
     private $Password;
 
-    public function __construct($id, $nombre, $apellido, $email, $password, $ciudad, $direccion, $telefono, $usuario)
+    public function __construct($id, $nombre, $apellido, $email, $password, $ciudad, $direccion, $telefono,$fechanacimiento, $usuario)
     {
         $this->Id = $id;
         $this->Nombre = $nombre;
@@ -18,6 +18,7 @@ class Usuario extends Persona
         $this->Ciudad = $ciudad;
         $this->Direccion = $direccion;
         $this->Telefono = $telefono;
+        $this->FechaNacimiento = $fechanacimiento;
         $this->Usuario = $usuario;
     }
     public function AgregarUsuario()
@@ -30,22 +31,13 @@ class Usuario extends Persona
         $ciudad = $this->Ciudad;
         $direccion = $this->Direccion;
         $telefono = $this->Telefono;
+        $fechanacimiento = $this ->FechaNacimiento;
         $usuario = $this->Usuario;
 
         $Conexion = new ConexionDB();
-        $Conexion->EstablecerConexion()->query("INSERT INTO tbusuarios(idUsuario,NomUsuario,ApellidoUsuario,EmailUsuario,PassUsuario,CiudadUsuario,DireccionUsuario,TelefonoUsuario) VALUES
-        ($id,'$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono',NOW())");
+        $Conexion->EstablecerConexion()->query("INSERT INTO tbusuarios(idUsuario,NomUsuario,ApellidoUsuario,EmailUsuario,PassUsuario,CiudadUsuario,DireccionUsuario,TelefonoUsuario,FechaNacimineto) VALUES
+        ($id,'$nombre','$apellido','$email','$password','$ciudad','$direccion','$telefono',$fechanacimiento,NOW())");
         echo "Datos registrados";
-
-        echo '<br/> oeeeee '.$id;
-        echo '<br/>'.$nombre;
-        echo '<br/>'.$apellido;
-        echo '<br/>'.$email;
-        echo '<br/>'.$password;
-        echo '<br/>'.$ciudad;
-        echo '<br/>'.$direccion;
-        echo '<br/>'.$telefono;
-        echo '<br/>'.$usuario;
     }
 
     

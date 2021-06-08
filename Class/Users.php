@@ -1,6 +1,6 @@
 <?php
 require_once 'ConexionDB.php';
-class prueba  
+class Usuario  
 {
     private $idUsuario;
     private $NomUsuario;
@@ -10,9 +10,9 @@ class prueba
     private $CiudadUsuario;
     private $DireccionUsuario;
     private $TelefonoUsuario;
-    private $DateCreate;
+    private $FechaNacimiento;
 
-    public function __construct($idUsuario,$NomUsuario,$ApellidoUsuario,$EmailUsuario,$PassUsuario,$CiudadUsuario,$DireccionUsuario,$TelefonoUsuario) {
+    public function __construct($idUsuario,$NomUsuario,$ApellidoUsuario,$EmailUsuario,$PassUsuario,$CiudadUsuario,$DireccionUsuario,$TelefonoUsuario,$FechaNacimiento) {
         $this->idUsuario = $idUsuario;
         $this->NomUsuario = $NomUsuario;
         $this->ApellidoUsuario = $ApellidoUsuario;
@@ -21,7 +21,7 @@ class prueba
         $this->CiudadUsuario = $CiudadUsuario;
         $this->DireccionUsuario = $DireccionUsuario;
         $this->TelefonoUsuario = $TelefonoUsuario;
-        $this->DateCreate = "NOW()";
+        $this->FechaNacimiento = $FechaNacimiento;
     }
 
     public function IngresarDatos(){
@@ -33,7 +33,7 @@ class prueba
         $CiudadUsuario = $this->CiudadUsuario;
         $DireccionUsuario = $this->DireccionUsuario;
         $TelefonoUsuario = $this->TelefonoUsuario;
-        $DateCreate = $this->DateCreate;
+        $FechaNacimiento = $this->FechaNacimiento;
 
         $conexion = new ConexionDB();
         $conexion->EstablecerConexion()->query("INSERT INTO tbusuarios(
@@ -45,11 +45,11 @@ class prueba
         CiudadUsuario, 
         DireccionUsuario, 
         TelefonoUsuario, 
-        DateCreate
+        FechaNacimiento
         )
         
         VALUES(
-        '$idUsuario',
+        $idUsuario,
         '$NomUsuario',
         '$ApellidoUsuario',
         '$EmailUsuario',
@@ -57,20 +57,8 @@ class prueba
         '$CiudadUsuario',
         '$DireccionUsuario',
         '$TelefonoUsuario',
-        '$DateCreate'
+        '$FechaNacimiento'
         )");
-         echo "Datos registrados";
-
-         echo '<br/> oeeeee '.$idUsuario;
-         echo '<br/>'.$NomUsuario;
-         echo '<br/>'.$ApellidoUsuario;
-         echo '<br/>'.$EmailUsuario;
-         echo '<br/>'.$PassUsuario;
-         echo '<br/>'.$CiudadUsuario;
-         echo '<br/>'.$DireccionUsuario;
-         echo '<br/>'.$TelefonoUsuario;
-        
-        
     }
 }
 

@@ -12,7 +12,7 @@
             <section>
                 <div>
                     <!--Formulario-->
-                    <form action="InsertarUsuario.php" method="POST" class="row g-3 needs-validation col"  id="Formulario">
+                    <form action="InsertarUsuario.php" method="POST" class="row g-3 needs-validation col" id="Formulario">
                         <div class="col-12 col-md-4">
                             <label for="id">Documento</label>.
                             <input type="text" name="documento" id="id" class="form-control" placeholder="Documento" required="">
@@ -133,14 +133,14 @@
 
                         <div class="col-12 col-md-4">
                             <label for="telefono">Fecha Nacimiento</label>
-                            <input type="date" name="fechanac" id="FechaNacimiento" class="form-control" placeholder="FechaNAcimiento" required="">
+                            <input type="date" name="fechanacimiento" id="FechaNacimiento" class="form-control" placeholder="FechaNAcimiento" required="">
                         </div>
 
                         <div class="col-12 col-md-">
                             <label for="usuario">Usuario</label>
                             <input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ingrese Usuario" required="">
                         </div>
-                        
+
                         <div class="modal-footer">
                             <button type="submit" name="btnAgregar" class="btn btn-info"><i class="fas fa-plus-circle"></i> Agregar</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times-circle"></i> Cancelar</button>
@@ -153,6 +153,4 @@
         </div>
     </div>
 
-</div>
-</div>
 </div>

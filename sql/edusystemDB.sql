@@ -9,8 +9,9 @@ CREATE TABLE tbusuarios(
   PassUsuario VARCHAR(160) COMMENT "Contrasela de el usario",
   CiudadUsuario VARCHAR(50) ,
   DireccionUsuario VARCHAR (50),
-  TelefonoUsuario VARCHAR(10) ,
-  DateCreate DATETIME  DEFAULT now()
+  TelefonoUsuario VARCHAR(10),
+  FechaNacimiento VARCHAR (50),
+  FechaInsert DATETIME  DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 
@@ -55,7 +56,7 @@ CREATE TABLE tbnotas (
   DescriptNota TEXT NOT NULL,
   FechaHora DATETIME NOT NULL,
   idUsuario INTEGER,
-  PrioridadNota
+  index(idUsuario),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 )ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 CREATE  TABLE tbcategoria_file(
@@ -65,14 +66,4 @@ CREATE  TABLE tbcategoria_file(
   FechaInsertCategoria DATETIME DEFAULT NOW(),
   index(idUsuario),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
-)ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
-
-CREATE  TABLE tbfactura(
-idFactura INTEGER PRIMARY KEY,
-DescripcionFactura TEXT,
-idUsuario INTEGER,
-PrecioCurso DOUBLE,
-FechaInsertFactura DATETIME NOT NULL DEFAULT now()
-index(idUsuario),
-FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 )ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;

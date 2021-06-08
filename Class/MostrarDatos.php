@@ -13,10 +13,8 @@ class MostrarDatos extends ConexionDB
 
 
         $Conexion = new ConexionDB();
-        $sql = "SELECT * FROM tbusuarios (, 'NomUsuario', 'ApellidoUsuario', 'EmailUsuario', 'PassUsuario', 'CiudadUsuario', 'DireccionUsuario', 'TelefonoUsuario', 'DateCreate')";
-        $Resultado = $Conexion->EstablecerConexion()->prepare($sql);
-        $Resultado->execute();
-        $UserData = 0;
+        $sql = "SELECT * FROM tbusuarios"; 
+        $Resultado = $Conexion->EstablecerConexion()->query($sql);
         return $Resultado;
 
         
