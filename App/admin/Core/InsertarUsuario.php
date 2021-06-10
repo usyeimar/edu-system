@@ -17,5 +17,8 @@ if (isset($_POST['btnAgregar'])) {
     $UsuarioSystem = trim($_POST['usuario']);
     $AgregarUsuario = new Usuario($idUsuario,$NomUsuario,$ApellidoUsuario,$EmailUsuario,$PassUsuario,$CiudadUsuario,$DireccionUsuario, $TelefonoUsuario,$FechaNacimiento,$UsuarioSystem);
     $AgregarUsuario->IngresarDatos();
+    if ($AgregarUsuario->IngresarDatos()) {
+        header("location: ../../");
+    }
    
 }

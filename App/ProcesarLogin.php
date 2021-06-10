@@ -14,7 +14,7 @@ if (isset($_POST['btnLogin'])) {
     if($UserArray['UserExist'] > 0){
         $_SESSION['usuario'] = $user;
         $_SESSION['idUsuario'] = $idUsuario;
-        header("location:./admin/Dashboard.php");
+        header("location:./global/Dashboard.php");
     }else{
         echo"DATOS INCORRECTOS";
         header("location:../");

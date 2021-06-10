@@ -1,9 +1,9 @@
 <?php
 session_start();
 error_reporting(0);
-$UserSession = $_SESSION['usuario'];
-if (isset($UserSession)) {
-  header("location: ./App/admin/Dashboard.php");
+$UserglobalSession = $_SESSION['usuario'];
+if (isset($UserglobalSession)) {
+  header("location: ./App/global/Dashboard.php");
 }else{
   require_once('./Class/ValidarUsuario.php');
   require_once('./Views/login.php');
