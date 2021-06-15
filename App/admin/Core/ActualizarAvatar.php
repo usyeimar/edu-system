@@ -24,8 +24,8 @@ if (((strpos($img_type, "gif") || strpos($img_type, "jpeg") ||
 ?>
     <script type="text/javascript">
        
+        window.location = "perfil.php";
         
-        swal("Imagen actualizada con exito")
         
         
     </script>

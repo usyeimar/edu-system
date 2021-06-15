@@ -65,109 +65,96 @@ require_once("./template/HeaderAdmin.php");
 
                                                 <div class="col-md-3">
                                                     <div class="tile p-0">
-                                                        <ul class="nav flex-column nav-tabs user-tabs  nav-pills ">
-                                                            <li class="nav-item">
-                                                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#user-timeline" role="tab" aria-controls="pills-home" aria-selected="true">Historial De Ingresos</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#user-settings" role="tab" aria-controls="pills-profile" aria-selected="false">Perfill</a>
-                                                            </li>
-                                                            <li class="nav-item">
-                                                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#user-password-reset" role="tab" aria-controls="pills-profile" aria-selected="false">Actualizar Contraseña</a>
-                                                            </li>
+                                                        <ul class="nav flex-column nav-tabs user-tabs">
+                                                            <li class="nav-item"><a class="nav-link active" href="#user-timeline" data-toggle="tab">Datos Personales</a></li>
+                                                            <li class="nav-item"><a class="nav-link" href="#user-settings" data-toggle="tab">Historial del Sistema</a></li>
                                                         </ul>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="col-md-9">
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="user-timeline">
-                                                            <h4>HISTORIAL DEL SISTEMA</h4>
+                                                            <h4>DATOS PERSONALES <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#ModalUpdateUsuario" type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></h4>
+                                                            <table class="table table-bordered">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td style="width: 150px;">Identificacion</td>
+                                                                        <td><?php echo $resultado['idUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Nombre:</td>
+                                                                        <td><?php echo $resultado['NomUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Apellidos :</td>
+                                                                        <td><?php echo $resultado['ApellidoUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email(Usuario) :</td>
+                                                                        <td><?php echo $resultado['EmailUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Contraseña :</td>
+                                                                        <td><?php echo $resultado['PassUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Ciudad :</td>
+                                                                        <td><?php echo $resultado['CiudadUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Direccion :</td>
+                                                                        <td><?php echo $resultado['DireccionUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Telefono :</td>
+                                                                        <td><?php echo $resultado['TelefonoUsuario']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Fecha Nacimiento :</td>
+                                                                        <td><?php echo $resultado['FechaNacimiento']; ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Fecha de Registro :</td>
+                                                                        <td><?php echo $resultado['FechaInsert']; ?></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
                                                         </div>
                                                         <div class="tab-pane fade" id="user-settings">
                                                             <div class="shadow p-3 mb-2 bg-body rounded">
                                                                 <div class="tile user-settings">
                                                                     <h4 class=" tile-title">MI INFORMACION</h4>
                                                                     <h4 class="line-head"></h4>
-                                                                    
-                                                                    <form>
-                                                                        <div class="row mb-4">
-                                                                            <div class="col-md-4">
-                                                                                <label for="idUsuario">Documento</label>
-                                                                                <input class="form-control" name="IdUsario" id="idUsuario" type="text" required="" placeholder="Documento">
-                                                                            </div>
-                                                                            <div class="col-md-4">
-                                                                                <label>Nombre</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Nombre">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row">
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Apellido</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Apellido">
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Correo</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Correo">
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Ciudad</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Ciudad">
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Direccion</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Direccion">
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Telefono</label>
-                                                                                <input class="form-control" type="text" required="" placeholder="Telefono">
-                                                                            </div>
-                                                                            <div class="clearfix"></div>
-                                                                            <div class="col-md-8 mb-4">
-                                                                                <label>Fecha Nacimiento</label>
-                                                                                <input class="form-control" type="date" required="" placeholder="Fecha de Nacimiento">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="row mb-10">
-                                                                            <div class="col-md-12">
-                                                                                <button class="btn btn-info" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i> Actualizar</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="tab-pane fade" id="user-password-reset">
-                                                            <form>
-                                                                <div class="shadow p-3 mb-2 bg-body rounded">
-                                                                    <div class="row">
-                                                                        <div class="col-md-10">
-                                                                            <div class="tile">
-                                                                                <h3 class="tile-title">ACTUALIZAR MI CONTRASEÑA</h3>
-                                                                                <div class="tile-body">
-                                                                                    <form>
-                                                                                        <div class="form-group">
-                                                                                            <label for="password" class="control-label">Contraseña</label>
-                                                                                            <input class="form-control" type="password" placeholder="Nueva contraseña" name="password" id="password"
-                                                                                        </div>
-                                                                                        <div class="form-group">
-                                                                                            <label class="control-label"></label>
-                                                                                            <input class="form-control" type="password" placeholder="Ingrese de nuevo su contraseña">
-                                                                                        </div>
-                                                                                        <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
-                                                                                    </form>
 
+
+                                                                    <div class="tab-pane fade" id="user-password-reset">
+                                                                        <form>
+                                                                            <div class="shadow p-3 mb-2 bg-body rounded">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-10">
+                                                                                        <div class="tile">
+                                                                                            <h3 class="tile-title">ACTUALIZAR MI CONTRASEÑA</h3>
+                                                                                            <div class="tile-body">
+                                                                                                <form>
+                                                                                                    <div class="form-group">
+                                                                                                        <label for="password" class="control-label">Contraseña</label>
+                                                                                                        <input class="form-control" type="password" placeholder="Nueva contraseña" name="password" id="password" </div>
+                                                                                                        <div class="form-group">
+                                                                                                            <label class="control-label"></label>
+                                                                                                            <input class="form-control" type="password" placeholder="Ingrese de nuevo su contraseña">
+                                                                                                        </div>
+                                                                                                        <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
+                                                                                                </form>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </form>
                                                                     </div>
                                                                 </div>
-                                                            </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -189,5 +176,6 @@ require_once("./template/HeaderAdmin.php");
         require_once("./template/FooterAdmin.php");
         require_once("./Modals/ModalAvatar.php");
         require_once("./Core/ActualizarAvatar.php");
+        require_once("./Modals/ModalUsuario.php");
         ?>
     </div>
