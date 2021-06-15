@@ -13,6 +13,7 @@ CREATE TABLE tbusuarios(
   FechaNacimiento VARCHAR (50),
   FechaInsert DATETIME DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbglobal_usuarios(
   idUsuario_global INTEGER PRIMARY KEY COMMENT "Llave primaria",
   NomUsuario_global VARCHAR(60) COMMENT "Nombre de el usuario",
@@ -25,6 +26,7 @@ CREATE TABLE tbglobal_usuarios(
   FechaNacimiento_global VARCHAR (50),
   FechaInsert DATETIME DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbprivilegios(
   idprivilegio INTEGER PRIMARY KEY COMMENT "Llave primaria",
   privilegio VARCHAR(30) COMMENT "Describe el privilegio de el usuario",
@@ -32,6 +34,7 @@ CREATE TABLE tbprivilegios(
   index(idUsuario),
   foreign key(idUsuario) references tbusuarios(idUsuario) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tblog(
   IdLog INTEGER PRIMARY KEY COMMENT 'Llave primaria',
   CambiosLog VARCHAR (50) COMMENT "Cambios hechos en el sistema",
@@ -41,9 +44,11 @@ CREATE TABLE tblog(
   index(idUsuario),
   foreign key(idUsuario) references tbusuarios(idUsuario) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbcategoria(
   NomCategoria VARCHAR(50) primary KEY COMMENT "Nombre de la la catergoria de el curso"
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbcursos(
   idCurso INTEGER PRIMARY KEY COMMENT "Llave primaria de la tabla cursos",
   NomCurso VARCHAR (50) NOT NULL COMMENT "Nombre de el Curso",
@@ -57,6 +62,7 @@ CREATE TABLE tbcursos(
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE,
   FOREIGN KEY(NomCategoria) REFERENCES tbcategoria(NomCategoria) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbnotas (
   idNota INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
   TitleNota VARCHAR (100),
@@ -66,6 +72,7 @@ CREATE TABLE tbnotas (
   index(idUsuario),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbcategoria_file(
   idCategoria INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
   idUsuario INTEGER NOT NULL,
@@ -74,12 +81,11 @@ CREATE TABLE tbcategoria_file(
   index(idUsuario),
   FOREIGN KEY(idUsuario) REFERENCES tbusuarios(idUsuario) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
 CREATE TABLE tbcredenciales_login(
-  idcredencial INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  NomUsuario VARCHAR(60),
-  PassUsuario VARCHAR(60),
-  index(NomUsuario),
-  FOREIGN KEY(NomUsuario) REFERENCES tbusuarios(NomUsuario) ON DELETE CASCADE,
-  index(PassUsuario),
-  FOREIGN KEY(PassUsuario) REFERENCES tbusuarios(PassUsuario) ON DELETE CASCADE
+  idCredencial_global_login INTEGER PRIMARY KEY  NOT NULL,
+  NomUsuario_global VARCHAR(60),
+  PassUsuario_global VARCHAR(60),
+  index(NomUsuario_global),
+  index(PassUsuario_global)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;

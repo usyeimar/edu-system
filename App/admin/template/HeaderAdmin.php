@@ -1,11 +1,18 @@
 <?php
+
 session_start();
 error_reporting(0);
+
 $UserSession = $_SESSION['usuario'];
 $idUserSession = $_SESSION['idUsuario'];
-if(!isset($UserSession)){
+if (!isset($UserSession)) {
   header("location: ../../");
 }
+// $sql = "SELECT * FROM tbusuarios WHERE NomUsuario = '$UserSession'";
+// $query = $Conexion->EstablecerConexion()->query($sql);
+
+// $UserData = mysqli_fetch_array($query);
+// $imagen = $UserData['AvatarUsuario'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,8 +31,8 @@ if(!isset($UserSession)){
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Muli:300,700&display=swap" rel="stylesheet">
-<!--Favicon Icon-->
-<link  rel="icon"   href="./assets/img/usuario.png" type="image/png" />
+  <!--Favicon Icon-->
+  <link  rel="icon"    href="./assets/img/usuario.png" type="image/png" />
 
   <!-- Ionic icons -->
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">

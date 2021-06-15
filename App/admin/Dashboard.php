@@ -17,7 +17,7 @@ $resultado = $conexion->EstablecerConexion()->query($consulta);
 // Obtenemos el número de filas
 $total = mysqli_num_rows($resultado);
 
-  
+
 ?>
 
 <body>
@@ -54,19 +54,19 @@ $total = mysqli_num_rows($resultado);
                                             <section>
                                                 <div class="row">
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Usuario.php">
-                                                        <div class="widget-small btn btn-primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Usuarios</h4>
-                                                                <p><b><?php echo $total ?></b></p>
+                                                        <a href="Usuario.php">
+                                                            <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Usuarios</h4>
+                                                                    <p><b><?php echo $total ?></b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
                                                         <a href="Roles.php">
-                                                            <div class="widget-small btn btn-info coloured-icon"><i class="icon fas fa-user-tag fa-3x"></i>
-                                                                <div>
+                                                            <div class="widget-small info coloured-icon"><i class="icon fas fa-user-tag fa-3x"></i>
+                                                                <div class="info">
 
                                                                     <h4>Roles</h4>
                                                                     <p><b>25</b></p>
@@ -75,24 +75,24 @@ $total = mysqli_num_rows($resultado);
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Archivos.php">
-                                                        <div class="widget-small btn btn-warning coloured-icon"><i class="icon fas fa-archive  fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Uploads</h4>
-                                                                <p><b>10</b></p>
+                                                        <a href="Archivos.php">
+                                                            <div class="widget-small warning coloured-icon"><i class="icon fas fa-archive  fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Uploads</h4>
+                                                                    <p><b>10</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="CategoriaFile.php">
-                                                        <div class="widget-small btn btn-danger coloured-icon"><i class="icon fas fa-folder-plus fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Categorias</h4>
-                                                                <p><b>500</b></p>
+                                                        <a href="CategoriaFile.php">
+                                                            <div class="widget-small danger coloured-icon"><i class="icon fas fa-folder-plus fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Categorias</h4>
+                                                                    <p><b>500</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </section>
@@ -101,47 +101,48 @@ $total = mysqli_num_rows($resultado);
                                             <section>
                                                 <div class="row">
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Notas.php">
-                                                        <div class="widget-small btn btn-secondary coloured-icon"><i class="icon fas fa-sticky-note fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Notas</h4>
-                                                                <p><b>5</b></p>
+                                                        <a href="Notas.php">
+                                                            <div class="widget-small secondary coloured-icon"><i class="icon fas fa-sticky-note fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Notas</h4>
+                                                                    <p><b>5</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Cursos.php">
-                                                        <div class="widget-small btn btn-light coloured-icon"><i class="icon fas fa-thumbs-up fa-3x"></i>
-                                                            <div>
-                                                                <h4>Cursos</h4>
-                                                                <p><b>25</b></p>
+                                                        <a href="Cursos.php">
+                                                            <div class="widget-small light coloured-icon"><i class="icon fas fa-thumbs-up fa-3x"></i>
+                                                                <div>
+                                                                    <h4>Cursos</h4>
+                                                                    <p><b>25</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Factura.php">
-                                                        <div class="widget-small btn btn-success coloured-icon"><i class="icon fas fa-wallet fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Facturas</h4>
-                                                                <p><b>10</b></p>
+                                                        <a href="Factura.php">
+                                                            <div class="widget-small success coloured-icon"><i class="icon fas fa-wallet fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Facturas</h4>
+                                                                    <p><b>10</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                    <a href="Configuracion.php">
-                                                        <div class="widget-small btn btn-dark coloured-icon"><i class="icon fas fa-users-cog fa-3x"></i>
-                                                            <div class="info">
-                                                                <h4>Configuracion</h4>
-                                                                <p><b>500</b></p>
+                                                        <a href="Configuracion.php">
+                                                            <div class="widget-small dark coloured-icon"><i class="icon fas fa-users-cog fa-3x"></i>
+                                                                <div class="info">
+                                                                    <h4>Configuracion</h4>
+                                                                    <p><b>500</b></p>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </section>
+
                                         </div>
                                     </div>
                                 </div>

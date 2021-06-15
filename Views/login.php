@@ -56,8 +56,6 @@
       $('#btnlogin').click(function() {
         if ($('#username').val() == "") {
           Swal.fire({
-            icon: 'error',
-            title:'Oops',
             text:'Rellena los campos para continuar'
           });
           return false;

@@ -44,14 +44,14 @@ $query = $Objeto->EstablecerConexion()->query($sql);
                     <div class="shadow p-3 mb-4 bg-body rounded">
 
                       <section>
-                        <main class="app-content">
-                          <div class="app-title">
+                       
+                          
                             <div>
                               <h1><i class="fas fa-users"></i> Usuarios </h1>
                               <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-plus-circle"></i> Nuevo</button>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
-                          </div>
+                          
                           <div class="row">
                             <div class="col-md-12">
                               <div class="tile">
@@ -110,7 +110,7 @@ $query = $Objeto->EstablecerConexion()->query($sql);
                               </div>
                             </div>
                           </div>
-                        </main>
+                       
 
                       </section>
                     </div>
