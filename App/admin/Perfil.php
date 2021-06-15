@@ -37,8 +37,6 @@ require_once("./template/HeaderAdmin.php");
                                     <div class="card-body">
 
                                         <section>
-
-
                                             <div class="row user">
                                                 <div class="col-md-12">
                                                     <div class="profile">
@@ -50,12 +48,12 @@ require_once("./template/HeaderAdmin.php");
                                                         $consulta = $Conexion->EstablecerConexion()->query($sql);
                                                         $resultado = mysqli_fetch_array($consulta);
                                                         $imagen = $resultado['AvatarUsuario'];
-                                                        
+
                                                         ?>
                                                         <?php //$imagen = "images/2AE2G3R.jpg"; 
                                                         ?>
                                                         <div class="info"><img class="user-img" src="<?php echo $imagen; ?>">
-                                                            <h4><?php echo $UserSession ?></h4>
+                                                            <h4><?php echo strtoupper($resultado['NomUsuario'] . " " . ucwords($resultado['ApellidoUsuario'])); ?></h4>
                                                             <p>FrontEnd Developer</p>
                                                             <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalAvatar"><i class="fas fa-sync-alt"></i> Cambiar Avatar</button>
 
@@ -85,12 +83,14 @@ require_once("./template/HeaderAdmin.php");
                                                 <div class="col-md-9">
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="user-timeline">
-                                                            <h4>Registro de ingresos al sistema</h4>
+                                                            <h4>HISTORIAL DEL SISTEMA</h4>
                                                         </div>
                                                         <div class="tab-pane fade" id="user-settings">
                                                             <div class="shadow p-3 mb-2 bg-body rounded">
                                                                 <div class="tile user-settings">
-                                                                    <h4 class="line-head">Mi Informacion</h4>
+                                                                    <h4 class=" tile-title">MI INFORMACION</h4>
+                                                                    <h4 class="line-head"></h4>
+                                                                    
                                                                     <form>
                                                                         <div class="row mb-4">
                                                                             <div class="col-md-4">
@@ -144,17 +144,29 @@ require_once("./template/HeaderAdmin.php");
                                                         </div>
                                                         <div class="tab-pane fade" id="user-password-reset">
                                                             <form>
-                                                                <h4 class="line-head">Actualizar Contraseña</h4>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputPassword1">Nueva Contraseña</label>
-                                                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder=" New Password">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="exampleInputPassword1">Password</label>
-                                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="New Password" required>
-                                                                </div>
+                                                                <div class="shadow p-3 mb-2 bg-body rounded">
+                                                                    <div class="row">
+                                                                        <div class="col-md-10">
+                                                                            <div class="tile">
+                                                                                <h3 class="tile-title">ACTUALIZAR MI CONTRASEÑA</h3>
+                                                                                <div class="tile-body">
+                                                                                    <form>
+                                                                                        <div class="form-group">
+                                                                                            <label for="password" class="control-label">Contraseña</label>
+                                                                                            <input class="form-control" type="password" placeholder="Nueva contraseña" name="password" id="password"
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <label class="control-label"></label>
+                                                                                            <input class="form-control" type="password" placeholder="Ingrese de nuevo su contraseña">
+                                                                                        </div>
+                                                                                        <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
+                                                                                    </form>
 
-                                                                <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </form>
                                                         </div>
                                                     </div>
@@ -176,5 +188,6 @@ require_once("./template/HeaderAdmin.php");
 
         require_once("./template/FooterAdmin.php");
         require_once("./Modals/ModalAvatar.php");
+        require_once("./Core/ActualizarAvatar.php");
         ?>
     </div>

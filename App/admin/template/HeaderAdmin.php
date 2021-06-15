@@ -2,9 +2,16 @@
 
 session_start();
 error_reporting(0);
-
 $UserSession = $_SESSION['usuario'];
 $idUserSession = $_SESSION['idUsuario'];
+require_once("../../Class/ConexionDB.php");
+$Conexion = new ConexionDB();
+$NomUser = $_SESSION['usuario'];
+$sql = "SELECT * FROM tbusuarios WHERE NomUsuario = '$NomUser'";
+$consulta = $Conexion->EstablecerConexion()->query($sql);
+$resultado = mysqli_fetch_array($consulta);
+$imagen = $resultado['AvatarUsuario'];
+
 if (!isset($UserSession)) {
   header("location: ../../");
 }

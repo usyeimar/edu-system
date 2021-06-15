@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="./Core/ActualizarAvatar.php" method="POST" id="ModalAvatar" name="ModalAvatar" class="formHorizontal" enctype="multipart/form-data">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" id="ModalAvatar" name="ModalAvatar" class="formHorizontal" enctype="multipart/form-data">
           <div class="form-group">
             <span>Avatar</span>
             <input class="form-control" id="txtNombreCategoria" name="imagen" type="file" required="">
@@ -72,25 +72,11 @@
     $('#btnActionFormCategoria').click(function() {
       var categoria = $('#txtNombreCategoria').val();
       if (categoria == "") {
-        swal("Debes agregar una categoria");
+        swal("Debes Seleccionar una imagen");
         return false;
       } else {
-        $.ajax({
-          type: "POST",
-          data: "categoria = " + categoria,
-          url: "../Core/ AgregarCategoria.php",
-          success: function(respuesta) {
-            respuesta = respuesta.trim();
-            if (respuesta == 1) {
-              $('#txtNombreCategoria').val("");
-              swal(":D", "Agregado con exito", "success")
-
-            } else {
-              swal(":(", "Fallo al Agregar", "error")
-            }
-          }
-
-        });
+        
+        
       }
     });
   });

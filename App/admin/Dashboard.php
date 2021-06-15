@@ -1,23 +1,6 @@
 <?php
 require_once("./template/HeaderAdmin.php");
 
-// Primero conectamos siempre a la base de datos mysql
-require '../../Class/ConexionDB.php';
-$conexion = new ConexionDB();
-// Sentencia SQL
-$consulta = "SELECT * FROM tbusuarios";
-$consulta1 = "SELECT * FROM tbcategoria";
-$consulta2 = "SELECT * FROM tbcursos";
-$consulta3 = "SELECT * FROM tbprivilegios";
-$consulta4 = "SELECT * FROM tblog";
-$consulta5 = "SELECT * FROM tbfactura";
-
-//Envía una consulta a la base de datos
-$resultado = $conexion->EstablecerConexion()->query($consulta);
-// Obtenemos el número de filas
-$total = mysqli_num_rows($resultado);
-
-
 ?>
 
 <body>
@@ -58,7 +41,7 @@ $total = mysqli_num_rows($resultado);
                                                             <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Usuarios</h4>
-                                                                    <p><b><?php echo $total ?></b></p>
+                                                                    <p><b>45</b></p>
                                                                 </div>
                                                             </div>
                                                         </a>

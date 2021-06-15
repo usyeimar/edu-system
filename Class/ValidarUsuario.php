@@ -15,7 +15,7 @@ class ValidarUsuarios
         $user = $this->user;
         $pass = $this->pass;
         $Conexion = new ConexionDB();
-        $sql ="SELECT COUNT(*) as UserExist FROM tbglobal_usuarios WHERE NomUsuario_global = '$user' AND PassUsuario_global = '$pass'";
+        $sql ="SELECT COUNT(*) as UserExist FROM tbusuarios WHERE NomUsuario = '$user' AND PassUsuario = '$pass'";
         $query =$Conexion->EstablecerConexion()->query($sql);
         return $query;
         
