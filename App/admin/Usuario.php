@@ -4,7 +4,7 @@ require_once("../../Class/ConexionDB.php");
 $Objeto = new ConexionDB();
 $sql = "SELECT * FROM tbusuarios";
 $query = $Objeto->EstablecerConexion()->query($sql);
-$ArrayData = $query->fetch_array();
+//$ArrayData = $query->fetch_array();
 
 ?>
 
@@ -44,20 +44,20 @@ $ArrayData = $query->fetch_array();
                     <div class="shadow p-3 mb-4 bg-body rounded">
 
                       <section>
-                        <main class="app-content">
-                          <div class="app-title">
+                       
+                          
                             <div>
                               <h1><i class="fas fa-users"></i> Usuarios </h1>
                               <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-plus-circle"></i> Nuevo</button>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
-                          </div>
+                          
                           <div class="row">
                             <div class="col-md-12">
                               <div class="tile">
                                 <div class="tile-body">
                                   <div class="table-responsive">
-                                    <table class="table table-hover table-bordered" id="sampleTable">
+                                    <table class="table table-hover table-bordered " id="sampleTabl">
 
                                       <thead>
                                         <tr>
@@ -74,9 +74,7 @@ $ArrayData = $query->fetch_array();
                                         </tr>
                                       </thead>
                                       <?php
-                                      //while ($ArrayData = $query->fetch_array()){
-
-                                      foreach ($ArrayData as $ArrayData) {
+                                      while ($ArrayData = $query->fetch_assoc()) {
                                       ?>
                                         <tbody>
                                           <tr>
@@ -89,8 +87,6 @@ $ArrayData = $query->fetch_array();
                                             <td><?php echo $ArrayData['DireccionUsuario'] ?></td>
                                             <td><?php echo $ArrayData['TelefonoUsuario'] ?></td>
                                             <td><?php echo $ArrayData['FechaNacimiento'] ?></td>
-
-
                                             <td style="width:150px;">
                                               <div>
                                                 <span class="btn btn-success btn-sm">
@@ -114,7 +110,7 @@ $ArrayData = $query->fetch_array();
                               </div>
                             </div>
                           </div>
-                        </main>
+                       
 
                       </section>
                     </div>
@@ -132,5 +128,6 @@ $ArrayData = $query->fetch_array();
 
   <?php
   require_once("./Modals/ModalForm.php");
+  require_once("./Core/InsertarUsuario.php");
   require_once("./template/FooterAdmin.php");
   ?>

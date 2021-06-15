@@ -10,14 +10,17 @@
             <form class="form-inline position-relative d-inline-block my-2">
                 <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
                 <button class="btn position-absolute btn-search" type="submit"><i class="icon ion-md-search"></i></button>
+
             </form>
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item dropdown">
+
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-users-icon-png-image_4144740.jpg" class="img-fluid rounded-circle avatar mr-2" alt="user-img"/>
+                        <img src="<?php echo $imagen ?>" class="avatar" alt="user-img" />
                         <?php
-                        echo $UserSession;
-                       
+                       echo strtoupper($resultado['NomUsuario']." ".ucwords($resultado['ApellidoUsuario']));
+
+
                         // echo ucwords($_SESSION['usuario']['nombre'])."". ucwords($_SESSION['usuario']['apellido']);
                         ?>
                     </a>

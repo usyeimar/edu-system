@@ -38,14 +38,14 @@ require_once("./template/HeaderAdmin.php");
                     <section>
                       <div class="shadow p-3 mb-4 bg-body rounded">
                         <section>
-                          <main class="app-content">
-                            <div class="app-title">
+                         
+                            
                               <div>
                                 <h1><i class="fas fa-users-cog"></i> Configuracion</h1>
                                 <p>Pulsa el boton de + parar agregar registros.</p>
                               </div>
-                            </div>
-                          </main>
+                           
+                         
                         </section>
 
                       </div>

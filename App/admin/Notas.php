@@ -38,57 +38,57 @@ require_once("./template/HeaderAdmin.php");
                   <div class="card-body">
                     <div class="shadow p-3 mb-4 bg-body rounded">
                       <section>
-                        <main class="app-content">
-                          <div class="app-title">
-                            <div>
-                              <h1><i class="fas fa-sticky-note"></i> Notas</h1>
-                              <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalNotas"><i class="fas fa-plus-circle"></i> Nueva</button>
-                              <p>Pulsa el boton de + parar agregar registros.</p>
-                            </div>
 
-                            <div class="row">
-                              <div class="col-md-12">
-                                <div class="tile">
-                                  <div class="tile-body">
-                                    <div class="table-responsive">
-                                      <table class="table table-hover table-bordered" id="sampleTable">
-                                        <thead>
-                                          <tr>
-                                            <th>ID</th>
-                                            <th>Nombre</th>
-                                            <th>Descripcion</th>
-                                            <th>Editar</th>
-                                            <th>Eliminar </th>
-                                          </tr>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td style="text-align:center;width:150px">
-                                              <div>
-                                                <span class="btn btn-warning btn-sm">
-                                                  <span <i class="fas fa-edit"></i></span>
-                                              </div>
-                                            </td>
 
-                                            <td style="text-align:center;width:150px">
-                                              <div>
-                                                <span class="btn btn-danger btn-sm">
-                                                  <span class="fas fa-trash-alt"></span>
-                                              </div>
+                        <div>
+                          <h1><i class="fas fa-sticky-note"></i> Notas</h1>
+                          <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalNotas"><i class="fas fa-plus-circle"></i> Nueva</button>
+                          <p>Pulsa el boton de + parar agregar registros.</p>
+                        </div>
 
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </div>
-                                  </div>
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div class="tile">
+                              <div class="tile-body">
+                                <div class="table-responsive">
+                                  <table class="table table-hover table-bordered" id="sampleTable">
+                                    <thead>
+                                      <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Descripcion</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td style="text-align:center;width:150px">
+                                          <div>
+                                            <span class="btn btn-warning btn-sm">
+                                              <span <i class="fas fa-edit"></i></span>
+                                          </div>
+                                        </td>
+
+                                        <td style="text-align:center;width:150px">
+                                          <div>
+                                            <span class="btn btn-danger btn-sm">
+                                              <span class="fas fa-trash-alt"></span>
+                                          </div>
+
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
                               </div>
                             </div>
-                        </main>
+                          </div>
+                        </div>
+
 
                       </section>
 

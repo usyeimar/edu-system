@@ -39,14 +39,14 @@ require_once("./template/HeaderAdmin.php");
                   <div class="card-body">
                     <div class="shadow p-3 mb-4 bg-body rounded">
                       <section>
-                        <main class="app-content">
-                          <div class="app-title">
+                        
+                         
                             <div>
                               <h1><i class="fas fa-archive"></i> Archivos</h1>
                               <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalArchivos"><i class="fas fa-plus-circle"></i> Agregar Archivos</button>
                               <p>Pulsa el boton de + parar agregar registros.</p>
                             </div>
-                          </div>
+                          
                           <?php
                           
                           ?>
@@ -84,8 +84,7 @@ require_once("./template/HeaderAdmin.php");
                               </div>
                             </div>
                           </div>
-                        </main>
-
+                       
                       </section>
                     </div>
                   </div>

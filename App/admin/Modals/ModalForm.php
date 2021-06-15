@@ -12,7 +12,7 @@
             <section>
                 <div>
                     <!--Formulario-->
-                    <form action="InsertarUsuario.php" method="POST" class="row g-3 needs-validation col" id="Formulario">
+                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" class="row g-3 needs-validation col" id="Formulario">
                         <div class="col-12 col-md-4">
                             <label for="id">Documento</label>.
                             <input type="text" name="documento" id="id" class="form-control" placeholder="Documento" required="">

@@ -38,13 +38,13 @@ require_once("./template/HeaderAdmin.php");
                     <section>
                       <div class="shadow p-3 mb-4 bg-body rounded">
                         <section>
-                          <main class="app-content">
-                            <div class="app-title">
+                         
+                           
                               <div>
                                 <h1><i class="fas fa-wallet"></i> Mis Facturas</h1>
                                 <p>Pulsa el boton de + parar agregar registros.</p>
                               </div>
-                            </div>
+                            
                             <div class="row">
                               <div class="col-md-12">
                                 <div class="tile">
@@ -118,7 +118,7 @@ require_once("./template/HeaderAdmin.php");
                                 </div>
                               </div>
                             </div>
-                          </main>
+                         
                         </section>
 
                       </div>
