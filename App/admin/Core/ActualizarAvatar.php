@@ -24,10 +24,7 @@ if (((strpos($img_type, "gif") || strpos($img_type, "jpeg") ||
 ?>
     <script type="text/javascript">
        
-        window.location = "perfil.php";
-        
-        
-        
+        window.location = "Perfil.php";  
     </script>
 <?php
 
