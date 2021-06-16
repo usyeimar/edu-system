@@ -68,6 +68,7 @@ require_once("./template/HeaderAdmin.php");
                                                         <ul class="nav flex-column nav-tabs user-tabs">
                                                             <li class="nav-item"><a class="nav-link active" href="#user-timeline" data-toggle="tab">Datos Personales</a></li>
                                                             <li class="nav-item"><a class="nav-link" href="#user-settings" data-toggle="tab">Historial del Sistema</a></li>
+                                                            <li class="nav-item"><a class="nav-link" href="#user-password" data-toggle="tab">Cambiar la contraseña</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -75,86 +76,86 @@ require_once("./template/HeaderAdmin.php");
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="user-timeline">
                                                             <h4>DATOS PERSONALES <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#ModalUpdateUsuario" type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></h4>
-                                                            <table class="table table-bordered">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td style="width: 150px;">Identificacion</td>
-                                                                        <td><?php echo $resultado['idUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Nombre:</td>
-                                                                        <td><?php echo $resultado['NomUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Apellidos :</td>
-                                                                        <td><?php echo $resultado['ApellidoUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Email(Usuario) :</td>
-                                                                        <td><?php echo $resultado['EmailUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Contraseña :</td>
-                                                                        <td><?php echo $resultado['PassUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Ciudad :</td>
-                                                                        <td><?php echo $resultado['CiudadUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Direccion :</td>
-                                                                        <td><?php echo $resultado['DireccionUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Telefono :</td>
-                                                                        <td><?php echo $resultado['TelefonoUsuario']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Fecha Nacimiento :</td>
-                                                                        <td><?php echo $resultado['FechaNacimiento']; ?></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Fecha de Registro :</td>
-                                                                        <td><?php echo $resultado['FechaInsert']; ?></td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
+                                                            <div class="shadow p-3 mb-2 bg-body rounded">
+                                                                <table class="table table-bordered">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="width: 150px;">Identificacion</td>
+                                                                            <td><?php echo $resultado['idUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Nombre:</td>
+                                                                            <td><?php echo $resultado['NomUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Apellidos :</td>
+                                                                            <td><?php echo $resultado['ApellidoUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Email(Usuario) :</td>
+                                                                            <td><?php echo $resultado['EmailUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Contraseña :</td>
+                                                                            <td><?php echo $resultado['PassUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Ciudad :</td>
+                                                                            <td><?php echo $resultado['CiudadUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Direccion :</td>
+                                                                            <td><?php echo $resultado['DireccionUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Telefono :</td>
+                                                                            <td><?php echo $resultado['TelefonoUsuario']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Fecha Nacimiento :</td>
+                                                                            <td><?php echo $resultado['FechaNacimiento']; ?></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Fecha de Registro :</td>
+                                                                            <td><?php echo $resultado['FechaInsert']; ?></td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
                                                         </div>
                                                         <div class="tab-pane fade" id="user-settings">
                                                             <div class="shadow p-3 mb-2 bg-body rounded">
                                                                 <div class="tile user-settings">
                                                                     <h4 class=" tile-title">MI INFORMACION</h4>
                                                                     <h4 class="line-head"></h4>
-
-
-                                                                    <div class="tab-pane fade" id="user-password-reset">
-                                                                        <form>
-                                                                            <div class="shadow p-3 mb-2 bg-body rounded">
-                                                                                <div class="row">
-                                                                                    <div class="col-md-10">
-                                                                                        <div class="tile">
-                                                                                            <h3 class="tile-title">ACTUALIZAR MI CONTRASEÑA</h3>
-                                                                                            <div class="tile-body">
-                                                                                                <form>
-                                                                                                    <div class="form-group">
-                                                                                                        <label for="password" class="control-label">Contraseña</label>
-                                                                                                        <input class="form-control" type="password" placeholder="Nueva contraseña" name="password" id="password" </div>
-                                                                                                        <div class="form-group">
-                                                                                                            <label class="control-label"></label>
-                                                                                                            <input class="form-control" type="password" placeholder="Ingrese de nuevo su contraseña">
-                                                                                                        </div>
-                                                                                                        <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
-                                                                                                </form>
-
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="user-password">
+                                                            <form>
+                                                                <div class="shadow p-3 mb-2 bg-body rounded">
+                                                                    <div class="row">
+                                                                        <div class="col-md-10">
+                                                                            <div class="tile">
+                                                                                <h3 class="tile-title">ACTUALIZAR MI CONTRASEÑA</h3>
+                                                                                <div class="tile-body">
+                                                                                    <form>
+                                                                                        <div class="form-group">
+                                                                                            <label for="password" class="control-label">Contraseña</label>
+                                                                                            <input class="form-control" type="password" placeholder="Nueva contraseña" name="password" id="password" </div>
+                                                                                            <div class="form-group">
+                                                                                                <label class="control-label"></label>
+                                                                                                <input class="form-control" type="password" placeholder="Ingrese de nuevo su contraseña">
+                                                                                            </div>
+                                                                                            <button type="submit" class="btn btn-info"><i class="fa fa-fw fa-lg fa-check-circle"></i>Actualizar</button>
+                                                                                    </form>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -177,5 +178,7 @@ require_once("./template/HeaderAdmin.php");
         require_once("./Modals/ModalAvatar.php");
         require_once("./Core/ActualizarAvatar.php");
         require_once("./Modals/ModalUsuario.php");
+        require_once("./Core/ActualizarDatos.php");
+
         ?>
     </div>

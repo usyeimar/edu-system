@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" class="form-horizontal">
           <div class="row mb-4">
             <div class="col-md-6">
               <label for="idUsuario">Identificacion</label>
@@ -31,13 +31,6 @@
               <input class="form-control" type="text" name="Email" id="Email" required="" placeholder="Email" value="<?php echo $resultado['EmailUsuario']; ?>">
             </div>
             <div class="clearfix"></div>
-            <div class="col-md-11 mb-1">
-              <label for="Contraseña">Contraseña</label>
-              <input class="form-control" type="password" name="Contraseña" id="Contraseña" required="" placeholder="Password" value="<?php echo $resultado['PassUsuario']; ?>">
-            </div>
-            <div class="col-md-11 mb-1">
-              <input class="form-control" type="password" required="" placeholder=" New Password" >
-            </div>
             <div class="col-md-11 mb-1">
               <label for="Ciudad">Ciudad</label>
               <input class="form-control" type="text" name="Ciudad" id="Ciudad" required="" placeholder="Ciudad" value="<?php echo $resultado['CiudadUsuario']; ?>">
