@@ -13,6 +13,7 @@ CREATE TABLE `tbusuarios` (
   `DireccionUsuario` varchar(50) DEFAULT NULL,
   `TelefonoUsuario` varchar(10) DEFAULT NULL,
   `FechaNacimiento` varchar(50) DEFAULT NULL,
+  
   `FechaInsert` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`idUsuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

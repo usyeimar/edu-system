@@ -11,6 +11,7 @@ CREATE TABLE tbusuarios(
   DireccionUsuario VARCHAR (50),
   TelefonoUsuario VARCHAR(10),
   FechaNacimiento VARCHAR (50),
+  AvatarUsuario TEXT,
   FechaInsert DATETIME DEFAULT now()
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
