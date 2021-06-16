@@ -75,7 +75,7 @@ require_once("./template/HeaderAdmin.php");
                                                 <div class="col-md-9">
                                                     <div class="tab-content">
                                                         <div class="tab-pane active" id="user-timeline">
-                                                            <h4>DATOS PERSONALES <button class="btn btn-sm btn-info" data-toggle="modal" data-target="#ModalUpdateUsuario" type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></h4>
+                                                            <h4>DATOS PERSONALES <a href="#ModalUpdateUsuario_<?php echo $resultado['idUsuario']; ?>"><button class="btn btn-sm btn-info" data-toggle="modal"  type="button"><i class="fas fa-pencil-alt" aria-hidden="true"></i></button></a></h4>
                                                             <div class="shadow p-3 mb-2 bg-body rounded">
                                                                 <table class="table table-bordered">
                                                                     <tbody>

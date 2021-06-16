@@ -1,5 +1,5 @@
 <!-- modalUsuarios -->
-<div class="modal fade" id="ModalUpdateUsuario" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="ModalUpdateUsuario_<?php echo $resultado['idUsuario']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm-lg">
     <div class="modal-content">
       <div class="modal-header headerRegister">
@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" class="form-horizontal">
+        <form method="POST" action="EditarDatos.php?id=<?php echo $resultado['idUsuario']; ?>"class="form-horizontal">
           <div class="row mb-4">
             <div class="col-md-6">
               <label for="idUsuario">Identificacion</label>
@@ -55,7 +55,7 @@
           <div class="clearfix"></div>
           <div class="tile-footer">
             <div class="col-md-12">
-              <button class="btn btn-info" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i> Actualizar</button>
+              <button class="btn btn-info" type="submit"><i class="fa fa-fw fa-lg fa-check-circle" name="actualizar"></i> Actualizar</button>
               <button class="btn btn-danger" type="button" data-dismiss="modal"><i class="fa fa-fw fa-lg fa-check-circle"></i> Cerrar</button>
             </div>
           </div>
