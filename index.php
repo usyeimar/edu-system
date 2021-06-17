@@ -5,7 +5,7 @@ $UserglobalSession = $_SESSION['usuario'];
 if (isset($UserglobalSession)) {
   header("location: ./App/admin/Dashboard.php");
 }else{
-  require_once('./App/Public/view/login.php');
+  require_once('Public/view/login.php');
 }
 
 
