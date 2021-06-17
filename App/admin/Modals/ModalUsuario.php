@@ -1,5 +1,5 @@
 <!-- modalUsuarios -->
-<div class="modal fade" id="edit-usuario_<?php echo $resultado['idUsuario']; ?>" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="edit-usuario" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm-lg">
     <div class="modal-content">
       <div class="modal-header headerRegister">
