@@ -52,8 +52,10 @@ require_once("Views/templates/HeaderAdmin.php");
                                                         ?>
                                                         <?php //$imagen = "images/2AE2G3R.jpg"; 
                                                         ?>
-                                                        <div class="info"><img class="user-img" src="<?php //echo $imagen; ?>">
-                                                            <h4><?php //echo strtoupper($resultado['NomUsuario'] . " " . ucwords($resultado['ApellidoUsuario'])); ?></h4>
+                                                        <div class="info"><img class="user-img" src="<?php //echo $imagen; 
+                                                                                                        ?>">
+                                                            <h4><?php //echo strtoupper($resultado['NomUsuario'] . " " . ucwords($resultado['ApellidoUsuario'])); 
+                                                                ?></h4>
                                                             <p>FrontEnd Developer</p>
                                                             <button class="btn btn-primary shadow-lg " type="button" data-toggle="modal" data-target="#ModalAvatar"><i class="fas fa-sync-alt"></i> Cambiar Avatar</button>
 
@@ -172,10 +174,11 @@ require_once("Views/templates/HeaderAdmin.php");
 
 
         <?php
+        require_once("Views/Modals/ModalUsuario.php");
+        require_once("Views/Modals/ModalAvatar.php");
+        require_once("Views/templates/FooterAdmin.php");
 
-        //require_once("./template/FooterAdmin.php");
-        //require_once("./Modals/ModalAvatar.php");
         //require_once("./Core/ActualizarAvatar.php");
-        //require_once("./Modals/ModalUsuario.php");
+
         ?>
     </div>

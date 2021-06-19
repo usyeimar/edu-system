@@ -107,5 +107,6 @@ require_once("Views/templates/HeaderAdmin.php");
 
 
   <?php
+  require_once("Views/Modals/ModalCategorias.php");
   require_once("Views/templates/FooterAdmin.php");
   ?>

@@ -107,7 +107,7 @@ require_once("Views/templates/HeaderAdmin.php");
 
 
   <?php
-
+require_once("Views/Modals/ModalNotas.php");
   require_once("Views/templates/FooterAdmin.php");
   
   ?>

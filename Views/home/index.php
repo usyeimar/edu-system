@@ -38,7 +38,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                             <section>
                                                 <div class="row">
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Usuario.php">
+                                                        <a href="Usuarios">
                                                             <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Usuarios</h4>
@@ -48,7 +48,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Roles.php">
+                                                        <a href="Roles">
                                                             <div class="widget-small info coloured-icon"><i class="icon fas fa-user-tag fa-3x"></i>
                                                                 <div class="info">
 
@@ -59,7 +59,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Archivos.php">
+                                                        <a href="Archivos">
                                                             <div class="widget-small warning coloured-icon"><i class="icon fas fa-archive  fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Uploads</h4>
@@ -69,7 +69,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="CategoriaFile.php">
+                                                        <a href="CategoriasFile">
                                                             <div class="widget-small danger coloured-icon"><i class="icon fas fa-folder-plus fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Categorias</h4>
@@ -85,7 +85,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                             <section>
                                                 <div class="row">
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Notas.php">
+                                                        <a href="Notas">
                                                             <div class="widget-small secondary coloured-icon"><i class="icon fas fa-sticky-note fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Notas</h4>
@@ -95,7 +95,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Cursos.php">
+                                                        <a href="Clases">
                                                             <div class="widget-small light coloured-icon"><i class="icon fas fa-thumbs-up fa-3x"></i>
                                                                 <div>
                                                                     <h4>Cursos</h4>
@@ -105,7 +105,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Factura.php">
+                                                        <a href="Factura">
                                                             <div class="widget-small success coloured-icon"><i class="icon fas fa-wallet fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Facturas</h4>
@@ -115,7 +115,7 @@ require_once'Views/templates/HeaderAdmin.php';
                                                         </a>
                                                     </div>
                                                     <div class="col-md-6 col-lg-3">
-                                                        <a href="Configuracion.php">
+                                                        <a href="Configuracion">
                                                             <div class="widget-small dark coloured-icon"><i class="icon fas fa-users-cog fa-3x"></i>
                                                                 <div class="info">
                                                                     <h4>Configuracion</h4>
