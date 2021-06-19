@@ -16,12 +16,15 @@
                 <li class="nav-item dropdown">
 
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="<?php echo $imagen ?>" class="avatar" alt="user-img" />
+                        
+                        <img src="<?php echo constant('URL') ?>/Public/images/usuario.png" class="avatar" alt="user-img" />
                         <?php
-                       echo strtoupper($resultado['NomUsuario']." ".ucwords($resultado['ApellidoUsuario']));
+                       //echo strtoupper($resultado['NomUsuario']." ".ucwords($resultado['ApellidoUsuario']));
 
 
-                        // echo ucwords($_SESSION['usuario']['nombre'])."". ucwords($_SESSION['usuario']['apellido']);
+                         //echo ucwords($_SESSION['usuario']['nombre'])."". ucwords($_SESSION['usuario']['apellido']);
+                         $name_prueba = "YEIMAR";
+                         echo $name_prueba;
                         ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

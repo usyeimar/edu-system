@@ -1,39 +1,10 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="../../Library/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="../../Library/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="../../Library/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="../../Library/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-<script>
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Feb 2020', 'Mar 2020', 'Abr 2020', 'May 2020'],
-      datasets: [{
-        label: 'Nuevos usuarios',
-        data: [50, 100, 150, 200],
-        backgroundColor: [
-          '#12C9E5',
-          '#12C9E5',
-          '#12C9E5',
-          '#111B54'
-        ],
-        maxBarThickness: 30,
-        maxBarLength: 2
-      }]
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
-    }
-  });
-</script>
+<script src="<?php echo constant('URL') ?>/Public/Libraries/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="<?php echo constant('URL') ?>/Public/Libraries/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="<?php echo constant('URL') ?>/Public/Libraries/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="<?php echo constant('URL') ?>/Public/Libraries/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
 <!-- Essential javascripts for application to work-->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -62,7 +33,7 @@
 <script src="js/plugins/pace.min.js"></script>
 <!-- Page specific javascripts-->
 <!-- Data table plugin-->
-<script type="text/javascript" src="../../Library/datatables.min.js"></script>
+<script type="text/javascript" src="<?php echo constant('URL') ?>/Public/Libraries/datatables.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function() {
     $('#sampleTable').DataTable({
@@ -95,7 +66,7 @@
 $('#FechaNAcimiento').data("DateTimePicker").FUNCTION()
 </script>
 <!-- Swit Alert JS-->
-<script src="../../Library/sweetalert.min.js"></script>
+<script src="Public/Libraries/sweetalert.min.js"></script>
 <script src="../assets/js/FunctionRoles.js"></script>
 
 </body>

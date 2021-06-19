@@ -4,7 +4,7 @@ class Login extends Controller{
     {
         parent::__construct();
         $this->view->render('login/index');
-        echo '<h1>Login </h1>';
+        
     }
 
     

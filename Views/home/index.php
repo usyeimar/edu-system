@@ -1,16 +1,17 @@
 <?php
-require_once("./template/HeaderAdmin.php");
+
+require_once'Views/templates/HeaderAdmin.php';
 
 ?>
 
 <body>
     <div class="d-flex" id="content-wrapper">
         <?php
-        require_once("./template/SidebarAdmin.php");
+        require_once'Views/templates/SidebarAdmin.php';
         ?>
         <div class="w-100">
             <?php
-            require_once("./template/NavBarAdmin.php");
+            require_once'Views/templates/NavBarAdmin.php';
             ?>
             <!-- Page Content -->
             <div id="content" class="bg-grey w-100">
@@ -141,6 +142,6 @@ require_once("./template/HeaderAdmin.php");
 
 
     <?php
-    require_once("./template/FooterAdmin.php");
-    require_once("./Modals/ModalArchivos.php");
+    require_once("Views/templates/FooterAdmin.php");
+    
     ?>

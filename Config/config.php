@@ -29,3 +29,21 @@ define('URL_PROTOCOL', '//');
 define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
 define('URL_SUB_FOLDER', str_replace(URL_PUBLIC_FOLDER, '', dirname($_SERVER['SCRIPT_NAME'])));
 define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
+
+/**
+ * Configuracion for: HOST
+ * 
+ * DB:
+ * 
+ * USER:
+ * 
+ * PASSWORD:
+ * 
+ * 
+ */
+
+ define('HOST','edusystendb.cd6l3kpvdycv.us-east-1.rds.amazonaws.com');
+ define('DB','edusystemdb');
+ define('USER','armagedon');
+ define('PASSWORD','admindb1234');
+ define('CHARSET','utf8mb4');

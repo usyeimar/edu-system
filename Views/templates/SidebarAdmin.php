@@ -1,6 +1,6 @@
   <!-- Sidebar -->
   <div id="sidebar-container" class="bg-primary">
-      <a href="Dashboard.php">
+      <a href="home">
           <div class="logo">
               <h4 class="text-light font-weight-bold mb-0">Edu-System</h4>
           </div>
@@ -8,28 +8,21 @@
 
 
       <div class="menu">
-          <a href="Dashboard.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-apps lead mr-2"></i>
-              Dashboard</a>
+          <a href="<?php echo constant('URL') ?>/home" class="d-block text-light p-3 border-0"><i class="fas fa-home"></i>
+              Home</a>
 
-          <a href="Usuario.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-people lead mr-2"></i>
+          <a href="<?php echo constant('URL') ?>/Usuarios" class="d-block text-light p-3 border-0"><i class="fas fa-users"></i>
               Usuarios</a>
-          <a href="Roles.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-person-add lead mr-2"></i>
+          <a href="<?php echo constant('URL') ?>/Roles" class="d-block text-light p-3 border-0"><i class="fas fa-user-tag"></i>
               Roles</a>
-          <a href="Archivos.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-archive lead mr-2"></i>
+          <a href="<?php echo constant('URL') ?>/Archivos" class="d-block text-light p-3 border-0"><i class="fas fa-archive"></i>
               Archivos</a>
-           <a href="CategoriaFile.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-filing lead mr-2"></i>
+          <a href="<?php echo constant('URL') ?>/CategoriasFile" class="d-block text-light p-3 border-0"> <i class="fas fa-folder-plus"></i>
               Categorias File</a>
-          <a href="Notas.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-checkbox lead mr-2"></i>
+          <a href="<?php echo constant('URL') ?>/Notas" class="d-block text-light p-3 border-0"><i class="fas fa-sticky-note"></i>
               Notas</a>
-          <a href="Cursos.php" class="d-block text-light p-3 border-0"><i class="icon ion-md-stats lead mr-2"></i>
-              Cursos</a>
-          <a href="Factura.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-card lead mr-2"></i>
-              Facturar</a>
-
-          <a href="Configuracion.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
-              Configuración</a>
-          <a href="uploads/Files.php" class="d-block text-light p-3 border-0"> <i class="icon ion-md-settings lead mr-2"></i>
-              FtPFile</a>
+          <a href="<?php echo constant('URL') ?>/Clases" class="d-block text-light p-3 border-0"><i class="fas fa-chalkboard-teacher"></i>
+              Clases</a>
 
       </div>
 

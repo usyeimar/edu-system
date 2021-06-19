@@ -3,11 +3,16 @@ require_once 'Controllers/errores.php';
 class App{
 function __construct()
 {
-    echo "<h1>Nueva App</h1>";
-    $url = $_GET['url'];
+    $url = isset($_GET['url']) ? $_GET['url']: null;
     $url = rtrim($url,'/');
     $url = explode('/',$url);
 
+    if (empty($url[0])) {
+        $ArchivoController = 'Controllers/home.php';
+        require_once $ArchivoController;
+        $controllers = new  Home();
+        return false;
+    }
    // var_dump($url);
    $ArchivoController = 'Controllers/' . $url[0] . '.php';
 
