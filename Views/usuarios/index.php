@@ -74,19 +74,19 @@ require_once("Views/templates/HeaderAdmin.php");
                                         </tr>
                                       </thead>
                                       <?php
-                                      while ($ArrayData = $query->fetch_assoc()) {
+                                      //while ($ArrayData = $query->fetch_assoc()) {
                                       ?>
                                         <tbody>
                                           <tr>
-                                            <td><?php echo $ArrayData['idUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['NomUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['ApellidoUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['EmailUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['PassUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['CiudadUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['DireccionUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['TelefonoUsuario'] ?></td>
-                                            <td><?php echo $ArrayData['FechaNacimiento'] ?></td>
+                                            <td><?php //echo $ArrayData['idUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['NomUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['ApellidoUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['EmailUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['PassUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['CiudadUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['DireccionUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['TelefonoUsuario'] ?></td>
+                                            <td><?php //echo $ArrayData['FechaNacimiento'] ?></td>
                                             <td style="width:150px;">
                                               <div>
                                                 <span class="btn btn-success btn-sm">
@@ -100,9 +100,7 @@ require_once("Views/templates/HeaderAdmin.php");
 
                                             </td>
                                           </tr>
-                                        <?php
-                                      }
-                                        ?>
+                                        
                                         </tbody>
                                     </table>
                                   </div>

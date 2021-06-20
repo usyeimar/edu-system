@@ -11,6 +11,7 @@ function __construct()
         $ArchivoController = 'Controllers/home.php';
         require_once $ArchivoController;
         $controllers = new  Home();
+        $controllers->LoadModel('home');
         return false;
     }
    // var_dump($url);
@@ -19,6 +20,7 @@ function __construct()
    if (file_exists($ArchivoController)) {
     require_once $ArchivoController;
     $controllers = new  $url[0];
+    $controllers->loadModel($url[0]);
     if (isset($url[1])) {
         $controllers->{$url[1]}();
     }

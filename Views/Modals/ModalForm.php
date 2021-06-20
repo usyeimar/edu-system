@@ -3,8 +3,8 @@
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <div class="modal-header" style="background-color: rgb(15, 37, 107); color: white;">
-                <h2 class="modal-title" id="exampleModalLongTitle"> <i>Nuevo Usuario</i></h2>
+            <div class="modal-header" >
+                <h2 class="modal-title" id="exampleModalLongTitle"> Nuevo Usuario</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -12,7 +12,7 @@
             <section>
                 <div>
                     <!--Formulario-->
-                    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="POST" class="row g-3 needs-validation col" id="Formulario">
+                    <form action="<?php echo constant('URL'); ?>/usuarios/registrarUsuario" method="POST" class="row g-3 needs-validation col" id="Formulario">
                         <div class="col-12 col-md-4">
                             <label for="id">Documento</label>.
                             <input type="text" name="documento" id="id" class="form-control" placeholder="Documento" required="">
