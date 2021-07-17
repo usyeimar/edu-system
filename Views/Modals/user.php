@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="form-horizontal" action="<?php echo constant('URL');?>/">
+        <form class="form-horizontal" action="<?php echo constant('URL');?>/usuarios/registrarUsuario">
           <div class="row mb-4">
             <div class="col-md-6">
               <label for="idUsuario">Identificacion</label>

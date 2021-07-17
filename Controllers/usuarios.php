@@ -1,5 +1,6 @@
 <?php
-class Usuarios extends Controller{
+class Usuarios extends Controller
+{
     function __construct()
     {
         parent::__construct();
@@ -8,7 +9,7 @@ class Usuarios extends Controller{
 
     function registrarUsuario()
     {
-        echo"Alumno creado";
+        echo "Alumno creado";
         $idUsuario = trim($_POST['documento']);
         $NomUsuario = trim($_POST['nombre']);
         $ApellidoUsuario = trim($_POST['apellido']);
@@ -18,12 +19,26 @@ class Usuarios extends Controller{
         $DireccionUsuario = trim($_POST['direccion']);
         $TelefonoUsuario = trim($_POST['telefono']);
         $FechaNacimiento = trim($_POST['fechanacimiento']);
-        $UsuarioSystem = trim($_POST['usuario']);
-        $this->model->UserInsert(['documento'=>$idUsuario,]);
-
+        //$UsuarioSystem = trim($_POST['usuario']);
+        
+        if($this->model->insert([
+            'documento' => $idUsuario,
+            'nombre' => $NomUsuario,
+            'apellido' => $ApellidoUsuario,
+            'correo' => $EmailUsuario,
+            'password' => $PassUsuario,
+            'ciudad' => $CiudadUsuario,
+            'direccion' => $DireccionUsuario,
+            'telefono' => $TelefonoUsuario,
+            'fechanacimiento' => $FechaNacimiento
+            //'usuario' => $UsuarioSystem
+            ])){
+            //header('location: '.constant('URL').'nuevo/alumnoCreado');
+            $this->view->mensaje = "Alumno creado correctamente";
+            $this->view->render('nuevo/index');
+        }else{
+            $this->view->mensaje = "La matrícula ya está registrada";
+            $this->view->render('nuevo/index');
+        }
     }
-
-    
-    
-
 }

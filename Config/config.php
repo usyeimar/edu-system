@@ -42,7 +42,7 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
  * 
  */
 
- define('HOST','edusystendb.cd6l3kpvdycv.us-east-1.rds.amazonaws.com');
+ define('HOST','edusystemdb.cd6l3kpvdycv.us-east-1.rds.amazonaws.com');
  define('DB','edusystemdb');
  define('USER','armagedon');
  define('PASSWORD','admindb1234');

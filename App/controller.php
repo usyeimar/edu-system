@@ -6,7 +6,7 @@ function  __construct(){
 
 
 function LoadModel($model){
-    $url = 'Models/' . $model. 'model.php';
+    $url = 'Models/' . $model. '.php';
     if (file_exists($url)) {
         require $url;
         $modelName = $model. 'Model';

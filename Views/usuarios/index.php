@@ -125,6 +125,6 @@ require_once("Views/templates/HeaderAdmin.php");
 
 
   <?php
-  require_once("Views/Modals/ModalForm.php");
+  require_once("Views/Modals/CrearUsuario.php");
   require_once("Views/templates/FooterAdmin.php");
   ?>
