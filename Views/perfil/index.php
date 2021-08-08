@@ -174,8 +174,8 @@ require_once("Views/templates/HeaderAdmin.php");
 
 
         <?php
-        require_once("Views/Modals/ModalUsuario.php");
-        require_once("Views/Modals/ModalAvatar.php");
+        require_once("Views/Modals/CrearUsuario.php");
+        require_once("Views/Modals/SubirAvatar.php");
         require_once("Views/templates/FooterAdmin.php");
 
         //require_once("./Core/ActualizarAvatar.php");
